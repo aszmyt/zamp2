@@ -222,7 +222,7 @@ int Add_plugin(char const * wtyczka){
   return 0;
 }
 /*!
-Funkcja usuwa wszystkie wtyczki ktore zostaly wprowadzone do systemu,aby nie pozostawic zagubionych danych.
+Funkcja usuwa wszystkie wtyczki ktore zostaly wprowadzone do systemu,aby nie pozostawic zagubionych danych. .
 */
 void Del_plugin()
 {
