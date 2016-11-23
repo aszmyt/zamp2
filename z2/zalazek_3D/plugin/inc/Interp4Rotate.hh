@@ -1,5 +1,5 @@
-#ifndef  COMMAND4MOVE_HH
-#define  COMMAND4MOVE_HH
+#ifndef  COMMAND4ROTATE_HH
+#define  COMMAND4ROTATE_HH
 
 #ifndef __GNUG__
 # pragma interface
@@ -10,30 +10,24 @@
 
 /*!
  * \file
- * \brief Definicja klasy Interp4Fly
+ * \brief Definicja klasy Interp4Rotate
  *
- * Plik zawiera definicję klasy Interp4Fly ...
+ * Plik zawiera definicję klasy Interp4Rotate ...
  */
 
 /*!
- * \brief Modeluje polecenie dla robota mobilnego, które wymusza jego ruch do przodu
+ * \brief Modeluje polecenie dla robota mobilnego, które wymusza jego ruch do obor wokol wlasnej osi
  *
  *  Klasa modeluje ...
  */
-class Interp4Fly: public Interp4Command {
-  /*
-   *  Tu należy zdefiniować pola, które są niezbędne
-   *  do przechowywania wartości parametrów danego polecenia.
-   *  Ponieżej zdefiniowane jest tylko jedno pole jako przykład.
-   */
-  double  _hor_speed;
-  double  _ver_speed;
-  double  _dist;
+class Interp4Rotate: public Interp4Command {
+  double  _Angle_rotation;    //(stopnie) kat obrotu
+  double  _Angular_velocity;  //(stopnie na sekunde)predkosc katowa stopnie/sekunda
  public:
   /*!
    * \brief
    */
-  Interp4Fly();  
+  Interp4Rotate();  
   /*!
    * \brief
    */

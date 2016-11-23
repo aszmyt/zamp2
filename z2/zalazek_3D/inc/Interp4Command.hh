@@ -4,6 +4,7 @@
 #include <iostream>
 #include "DronPose.hh"
 #include "Visualization.hh"
+#include <unistd.h>
 
 /*!
  * \file

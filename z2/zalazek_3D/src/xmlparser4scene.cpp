@@ -3,25 +3,23 @@
 #include <cassert>
 #include <cstdlib>
 #include <iostream>
-#include <string>
 #include <sstream>
-#include <vector>
 
-// #ifndef XMLSize_t
-// # define XMLSize_t unsigned int
-// #endif
+#ifndef XMLSize_t
+# define XMLSize_t unsigned int
+#endif
 
 
 using namespace std;
 
-bool string2float(const char* sNumber, double& dVal)
+bool String2Double (const char *sNumText, double & Val)
 {
-  std::istringstream strm(sNumber);
-  if(!(strm >> dVal)) return false;
-  char c;
-  return !(strm >> c);
+  istringstream IStrm(sNumText);
+  if(!(IStrm >> Val)) return false;
+  char Ch;
+  if(IStrm>>Ch)return false;
+  return true;
 }
-
 
 /*!
  * Konstruktor klasy. Tutaj należy zainicjalizować wszystkie
@@ -54,6 +52,7 @@ void XMLParser4Scene::endDocument()
 }
 
 
+
 /*!
  * Wykonuje operacje związane z wystąpieniem danego elementu XML.
  * W przypadku elementu \p "Action" będzie to utworzenie obiektu
@@ -65,58 +64,34 @@ void XMLParser4Scene::endDocument()
  */
 void XMLParser4Scene::WhenStartElement( const std::string       &ElemName,
 		                      const xercesc::Attributes   &Attrs
-					)
+                                    )
 {
-  //cout << "       ---> Tu moge przetwarzyc element: " << ElemName << endl;
-
-  const char* wsk = xercesc::XMLString::transcode(Attrs.getValue(static_cast<XMLSize_t>(0)));
-
-  if(ElemName == "Obstacle")
+  int pom=Attrs.getLength();
+  for(int i=0;i<pom;i++)
     {
-      // cout << wsk << endl;
-    }
+      char * sElemName = xercesc::XMLString::transcode(Attrs.getQName(i));
+      char* sCommandName = xercesc::XMLString::transcode(Attrs.getValue(static_cast\
+								    <XMLSize_t>(i)));
+      cout<<"atrybut nr "<<i<<" : "<< sElemName<<"\t";
 
-  if(ElemName == "Parameter")
-    {
-      const char* val  = xercesc::XMLString::transcode(Attrs.getValue(static_cast<XMLSize_t>(1)));
-      double value;
-      
-      if(!string2float(val,value))
+      if(sElemName== "Value")
 	{
-	  cerr << "cos poszlo nie tak przy konwersji stringa do inta :(" << endl;
-	  return;
+	  double val;
+	  if(String2Double(sCommandName, val) == false)
+	    val= 0.0;
+	  cout<<val<<endl;
 	}
-      
-      if(strcmp(wsk,"Center_x")==0)
-	{
-	   tr[0]=value;
-	}
-      
-      if(strcmp(wsk,"Center_y")==0)
-	{
-	   tr[1]=value;
-	}
-      
-      if(strcmp(wsk,"Center_z")==0)
-	{
-	  tr[2]=value;
-	}
-
-      
-      if(strcmp(wsk,"Size_x")==0)
-	{
-	  siz[0]=value;
-	}
-      if(strcmp(wsk,"Size_y")==0)
-	{
-	  siz[1]=value;
-	}
-      if(strcmp(wsk,"Size_z")==0)
-	{
-	  siz[2]=value;
-	}
+      else
+	cout<<sCommandName<<endl;
     }
+ 
+      
+ 
+  /*
+   *  Tu moge rozpoznac element i przetworzyc jego atrybuty
+   */
 }
+
 
 
 
@@ -134,7 +109,9 @@ void XMLParser4Scene::WhenStartElement( const std::string       &ElemName,
  *                 W przykładzie pokazanym powyżej listę atrybutów
  *                 będą stanowiły napisy:
  */
-
+/*
+ * Te metode nalezy odpowiednio zdekomponowac!!!
+ */
 void XMLParser4Scene::startElement(  const   XMLCh* const    pURI,
                                        const   XMLCh* const    pLocalName,
                                        const   XMLCh* const    pQNname,
@@ -160,7 +137,7 @@ void XMLParser4Scene::startElement(  const   XMLCh* const    pURI,
      </Action>
    \endverbatim
  * to metoda ta zostanie wywołana po napotkaniu znacznika
- *  /Action. Jeżeli element XML ma formę skróconą, tzn.
+ * \p </Action>. Jeżeli element XML ma formę skróconą, tzn.
    \verbatim
      <Parametr Name="Rotate"/>
    \endverbatim
@@ -168,7 +145,6 @@ void XMLParser4Scene::startElement(  const   XMLCh* const    pURI,
  * napotkania sekwencji "/>"
  *  \param[in] pLocalName -  umożliwia dostęp do nazwy elementu XML.
  *                 W podanym przykładzie nazwą elementu XML jest "Action".
- * \param[in] pQName - 
  */
 void XMLParser4Scene::endElement(  const   XMLCh* const    pURI,
                                      const   XMLCh* const    pLocalName,
@@ -176,12 +152,9 @@ void XMLParser4Scene::endElement(  const   XMLCh* const    pURI,
                                   )
 {
    char* sElemName = xercesc::XMLString::transcode(pLocalName);
+   
 
-   if(strcmp(sElemName,"Obstacle")==0)
-     {
-       _pScn->prostopad.push_back(new Prostopadloscian(tr,siz));
-     }
-       WhenEndElement(sElemName);
+   WhenEndElement(sElemName);
 
    xercesc::XMLString::release(&sElemName);
 }
@@ -198,9 +171,7 @@ void XMLParser4Scene::endElement(  const   XMLCh* const    pURI,
  */
 void XMLParser4Scene::WhenEndElement(const std::string& ElemName)
 {
-  //cout << "       ---> Tu na koniec moge wykonac jakies dzialanie (o ile jest potrzebne)"
-  
-  //<< endl << endl;
+   
 }
 
 
@@ -233,7 +204,7 @@ void XMLParser4Scene::fatalError(const xercesc::SAXParseException&  Exception)
  * Metoda jest wywoływana, gdy napotkany zostanie błąd, który nie
  * jest traktowany jako fatalny. W ten sposób traktowane są błędy
  * występujące w opisie gramatyki dokumentu.
- * \param[in] Exception - zawiera informacje dotyczące błędu. Informacje
+ * \param[in] Except - zawiera informacje dotyczące błędu. Informacje
  *                     te to opis błędu oraz numer linii, w której
  *                     wystąpił błąd.
  */
@@ -262,7 +233,9 @@ void XMLParser4Scene::error(const xercesc::SAXParseException&  Exception)
 }
 
 
-
+/*!
+ *
+ */
 void XMLParser4Scene::warning(const xercesc::SAXParseException&  Exception)  
 {
   cerr << "Ostrzezenie ..." << endl;

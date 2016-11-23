@@ -1,0 +1,5 @@
+Fly 39 50 32
+Rotate 10 90
+Fly 39 53 52
+Rotate 8 130
+Fly 22 32 -60

@@ -1,5 +1,5 @@
-#ifndef  COMMAND4MOVE_HH
-#define  COMMAND4MOVE_HH
+#ifndef  COMMAND4TURN_HH
+#define  COMMAND4TURN_HH
 
 #ifndef __GNUG__
 # pragma interface
@@ -20,20 +20,20 @@
  *
  *  Klasa modeluje ...
  */
-class Interp4Fly: public Interp4Command {
+class Interp4Turn: public Interp4Command {
   /*
    *  Tu należy zdefiniować pola, które są niezbędne
    *  do przechowywania wartości parametrów danego polecenia.
    *  Ponieżej zdefiniowane jest tylko jedno pole jako przykład.
    */
-  double  _hor_speed;
-  double  _ver_speed;
-  double  _dist;
+  double  _ang_speed;
+  double ang;
+  double radius;
  public:
   /*!
    * \brief
    */
-  Interp4Fly();  
+  Interp4Turn();  
   /*!
    * \brief
    */

@@ -232,7 +232,7 @@ bool WriteCurrDonPose( const DronPose *pPose )
   RotorAngle_rad += 5*M_PI/180;
 
   if (!TransformGeom(FILE_NAME__DRON_BODY_TEMPLATE,FILE_NAME__DRON_BODY_VIEW,
-                     pPose->GetPos_m(), DronAngle_rad, DronScale)) return false;
+                     pPose->GetPos_m(), (pPose->GetAngle_deg(DronAngle_rad)*3.14/180), DronScale)) return false;
 
 
    //
