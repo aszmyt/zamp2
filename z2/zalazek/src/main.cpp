@@ -88,9 +88,7 @@ int main()
 	  cout<< "brak dostepu do pliku" <<endl;
 	break;  
       case 'p':
-	/*! 
-	  Funkcja wyswietlajaca sekwencje instrukcji ktore sa obslugiwane przez program 
-	*/
+
  	if(plugins==0)
 	  cout<<"Brak wtyczek"<<endl;
 	else
