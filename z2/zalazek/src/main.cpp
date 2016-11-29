@@ -77,10 +77,6 @@ int main()
     switch( opcja )
       {
       case 'w':
-	/*!
-	  Funkcja wczytywania pliku do systemu
-	  \li Zostaje sprawdzone czy plik zostal otwarty prawidlowo czy nie
-	*/
 	cout<<"Podaj nazwe pliku: ";
 	cin>>plik;
 	file.open(plik);
