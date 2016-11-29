@@ -56,6 +56,8 @@ const char* Interp4Fly::GetCmdName() const
 bool Interp4Fly::ExecCmd( DronPose     *pRobPose,  Visualization *pVis) const
 {
 double x,y,z,c,d;
+
+
 	d=pRobPose->GetAngle_deg(d);
 	c=sqrt(pow(_hor_speed,2)+pow(_ver_speed,2));
 	c=_dist/c;
