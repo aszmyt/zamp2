@@ -98,9 +98,6 @@ int main()
 	  }
 	break;
       case 'i':
-	/*!
-	  Funkcja przedstawia nazwy wtyczek zawartych w programie
-	*/
 	if(plugins==0)
 	  cout<<"Brak wtyczek"<<endl;
 	else
