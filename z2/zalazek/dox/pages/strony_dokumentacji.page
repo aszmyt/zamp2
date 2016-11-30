@@ -1,5 +1,5 @@
 /*!
-  \mainpage  Interpreter komend dla platformy mobilnej
+  \mainpage  Interpreter komend dla drona
 
    Interpreter poleceń stworzony jest na potrzeby symulacji ...
 
@@ -13,7 +13,7 @@
 
   \section etykieta_zalozenia Podstawowe założenia
 
-   Interpreter poleceń polecania z pliku, w którym 
+   Interpreter poleceń czyta polecania z pliku, w którym 
    mogą być występować definicje symboli makr w sensie
    języka C, jak też komentarze o budowie właściwej dla tego
    języka.

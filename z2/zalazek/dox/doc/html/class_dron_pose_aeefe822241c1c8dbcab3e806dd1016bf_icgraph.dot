@@ -1,0 +1,13 @@
+digraph "DronPose::SetPos_m"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="DronPose::SetPos_m",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="Interp4Fly::ExecCmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_interp4_fly.html#a87ba6f2a2f81b12ce7469913b891137c",tooltip="Wykonuje zadanie dla danej wtyczki i wyświetla pozycję drona. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Interp4Turn::ExecCmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_interp4_turn.html#a5af667015f412dbe5e0082aea6c33142",tooltip="Wykonuje zadanie dla danej wtyczki i wyświetla pozycję drona. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4"];
+}

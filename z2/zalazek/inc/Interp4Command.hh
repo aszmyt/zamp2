@@ -4,7 +4,12 @@
 #include <iostream>
 #include "DronPose.hh"
 #include "Visualization.hh"
+#include "Colision.hh"
+#include "Scene.hh"
+#include <cmath>
 #include <unistd.h>
+
+
 
 /*!
  * \file
@@ -16,9 +21,9 @@
 /*!
  * \brief Modeluje abstrakcyjne polecenie dla robota mobilnego
  *
- *  Klasa modeluje ...
+ *  Klasa modeluje abstrakcyjne polecenie dla robota mobilnego
  */
- class Interp4Command {
+class Interp4Command {
   public:
    /*!
     * \brief Destruktor wirtualny ze wzgledu na klasy pochodne
@@ -27,23 +32,30 @@
     */
    virtual ~Interp4Command() {}
    /*!
-    * \brief
+    * \brief Wyświetla komendę oraz parametry
     */
    virtual void PrintCmd() const = 0;
    /*!
-    * \brief
+    * \brief Wyswietla nazwy paramwetrów oraz jednostki
     */
    virtual void PrintSyntax() const = 0;
    /*!
-    * \brief
+    * \brief Zwraca nazwę komendy
+    * \return zwraca nazwę komenty
     */
    virtual const char* GetCmdName() const = 0;
    /*!
-    * \brief
+    * \brief Wykonuje zadanie
+    *  \param[in] pRobPose - pozycja drona w przestrzeni 3D
+    *  \param[in] pVis - wizualizacja drona
+    *
+    * \retval true  - jesli wykonanie zadania zakończyło się powodzeniem,
+    * \retval false - w przypadku przeciwnym.
+    *
     */
-   virtual bool ExecCmd(  DronPose  *pRobPose,  Visualization *pVis  ) const = 0;
+   virtual bool ExecCmd(  DronPose  *pRobPose,  Visualization *pVis ,Scene *scn ) const = 0;
    /*!
-    * \brief
+    * \brief Wczytuje parametry
     */
    virtual bool ReadParams(std::istream& Strm_CmdsList) = 0;
  };

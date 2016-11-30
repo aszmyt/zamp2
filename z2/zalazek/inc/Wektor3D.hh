@@ -26,9 +26,23 @@ class Wektor3D {
    */
   Wektor3D() { for (double &Wsp : _Wsp)  Wsp = 0; }
   /*!
+   *
+   */
+  Wektor3D( double xx, double yy, double zz )
+               { _Wsp[0] = xx;  _Wsp[1] = yy;  _Wsp[2] = zz; }
+
+  /*!
    * \brief
    */
   Wektor3D& operator += (const Wektor3D& Wek);
+
+
+  /*!
+   * \brief
+   */
+  Wektor3D operator + (const Wektor3D& Wek) const
+                     { return  Wektor3D(*this) += Wek; }
+
   /*!
    * \brief Udostępnia do odczytu współrzędną o podanym indeksie.
    * 

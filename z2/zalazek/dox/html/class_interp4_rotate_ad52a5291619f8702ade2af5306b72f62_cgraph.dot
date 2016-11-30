@@ -1,0 +1,17 @@
+digraph "Interp4Rotate::ExecCmd"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Interp4Rotate::ExecCmd",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="DronPose::GetAngle_deg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dron_pose.html#aa9160f3023b57af02925b0f897f479d7",tooltip="Udostępnia kąt orientacji drona. "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="DronPose::SetAngle_deg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dron_pose.html#aee0129456ec59fde5b6bdbadb9c699e9",tooltip="Ustawia wartości kąta orientacji robota. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Visualization::Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_visualization.html#ad5a2dbdd604cafb0c38b586886bbd924",tooltip="Powoduje odrysowanie aktualnej sceny z uwzglęnieniem bieżącej pozycji drona. "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Visualization::ReadScene",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_visualization.html#a4f3c0ad178b308c9ad4ddc9e647d7a16",tooltip="Metoda ma czytać opis sceny z pliku XML. "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Visualization::GetObstacle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_visualization.html#ae3e5a56475e46db693425495ebd0e267",tooltip="Udostępnia wskaźnik na przeszkodę o podanym indeksie. "];
+}

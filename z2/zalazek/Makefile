@@ -7,11 +7,17 @@ obj:
 __plugin__:
 	cd plugin; make
 
-CPPFLAGS=-Wall -pedantic -std=c++11 -Iinc
+CPPFLAGS=-Wall -g -pedantic -std=c++11 -Iinc
 LDFLAGS=-Wall
 
-interp: obj/main.o obj/lacze_do_gnuplota.o obj/GnuplotVisualizer.o obj/Wektor3D.o
-	g++ ${LDFLAGS} -o interp  obj/main.o obj/lacze_do_gnuplota.o obj/GnuplotVisualizer.o obj/Wektor3D.o -ldl
+interp: obj/main.o obj/xmlparser4scene.o obj/lacze_do_gnuplota.o obj/GnuplotVisualizer.o obj/Wektor3D.o obj/Manager4Plugins.o obj/Scene.o obj/Colision.o
+	g++ ${LDFLAGS} -o interp   obj/main.o obj/xmlparser4scene.o obj/lacze_do_gnuplota.o obj/GnuplotVisualizer.o obj/Wektor3D.o obj/Manager4Plugins.o  obj/Scene.o obj/Colision.o -ldl -lxerces-c -lreadline
+
+obj/xmlparser4scene.o: src/xmlparser4scene.cpp inc/xmlparser4scene.hh
+	g++ -c ${CPPFLAGS} -o obj/xmlparser4scene.o src/xmlparser4scene.cpp
+
+obj/Colision.o: src/Colision.cpp inc/Colision.hh
+	g++ -c ${CPPFLAGS} -o obj/Colision.o src/Colision.cpp
 
 obj/lacze_do_gnuplota.o: src/lacze_do_gnuplota.cpp inc/lacze_do_gnuplota.hh
 	g++  -c ${CPPFLAGS} -o obj/lacze_do_gnuplota.o src/lacze_do_gnuplota.cpp
@@ -23,8 +29,15 @@ obj/GnuplotVisualizer.o: src/GnuplotVisualizer.cpp inc/GnuplotVisualizer.hh\
 obj/Wektor3D.o: src/Wektor3D.cpp inc/Wektor3D.hh
 	g++ -c ${CPPFLAGS} -o obj/Wektor3D.o src/Wektor3D.cpp
 
-obj/main.o: src/main.cpp inc/Interp4Command.hh
+obj/Manager4Plugins.o: src/Manager4Plugins.cpp inc/Manager4Plugins.hh inc/DronPose.hh
+	g++ -c ${CPPFLAGS} -o obj/Manager4Plugins.o src/Manager4Plugins.cpp
+
+obj/Scene.o: src/Scene.cpp inc/Scene.hh inc/Cuboid.hh 
+	g++ -c ${CPPFLAGS} -o obj/Scene.o src/Scene.cpp
+
+obj/main.o: src/main.cpp inc/Interp4Command.hh inc/DronPose.hh
 	g++ -c ${CPPFLAGS} -o obj/main.o src/main.cpp
+
 clean:
 	rm -f obj/* interp core*
 

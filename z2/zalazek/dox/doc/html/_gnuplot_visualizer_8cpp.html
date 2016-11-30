@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Interpreter: Dokumentacja pliku GnuplotVisualizer.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Interpreter
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.11 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_gnuplot_visualizer_8cpp.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definicje</a> &#124;
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku GnuplotVisualizer.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;xercesc/sax2/SAX2XMLReader.hpp&gt;</code><br />
+<code>#include &lt;xercesc/sax2/XMLReaderFactory.hpp&gt;</code><br />
+<code>#include &lt;xercesc/sax2/DefaultHandler.hpp&gt;</code><br />
+<code>#include &lt;xercesc/util/XMLString.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="_gnuplot_visualizer_8hh_source.html">GnuplotVisualizer.hh</a>&quot;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &quot;<a class="el" href="_wektor3_d_8hh_source.html">Wektor3D.hh</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla GnuplotVisualizer.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="_gnuplot_visualizer_8cpp__incl.png" border="0" usemap="#_gnuplot_visualizer_8cpp" alt=""/></div>
+<map name="_gnuplot_visualizer_8cpp" id="_gnuplot_visualizer_8cpp">
+</map>
+</div>
+</div>
+<p><a href="_gnuplot_visualizer_8cpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definicje</h2></td></tr>
+<tr class="memitem:a553abd8711c56d9e1fc8d5abc48124b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gnuplot_visualizer_8cpp.html#a553abd8711c56d9e1fc8d5abc48124b0">FILE_NAME__ROTOR_TEMPLATE</a>&#160;&#160;&#160;&quot;wzor_rotora.dat&quot;</td></tr>
+<tr class="separator:a553abd8711c56d9e1fc8d5abc48124b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a557fb3b594ec9b4e1c94ca0e5e03794f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gnuplot_visualizer_8cpp.html#a557fb3b594ec9b4e1c94ca0e5e03794f">FILE_NAME__ROTOR1</a>&#160;&#160;&#160;&quot;rotor1.dat&quot;</td></tr>
+<tr class="separator:a557fb3b594ec9b4e1c94ca0e5e03794f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad25d638718874c52828f8e6d4708305"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gnuplot_visualizer_8cpp.html#aad25d638718874c52828f8e6d4708305">FILE_NAME__ROTOR2</a>&#160;&#160;&#160;&quot;rotor2.dat&quot;</td></tr>
+<tr class="separator:aad25d638718874c52828f8e6d4708305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab913307fc5c5ba1cca06a3802dfdbaa7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gnuplot_visualizer_8cpp.html#ab913307fc5c5ba1cca06a3802dfdbaa7">FILE_NAME__ROTOR3</a>&#160;&#160;&#160;&quot;rotor3.dat&quot;</td></tr>
+<tr class="separator:ab913307fc5c5ba1cca06a3802dfdbaa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b0ee7fcb59e995dc83027e8ae84d88f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gnuplot_visualizer_8cpp.html#a3b0ee7fcb59e995dc83027e8ae84d88f">FILE_NAME__ROTOR4</a>&#160;&#160;&#160;&quot;rotor4.dat&quot;</td></tr>
+<tr class="separator:a3b0ee7fcb59e995dc83027e8ae84d88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a6c3d421ff2f75448e73d2e2d5bd4193f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gnuplot_visualizer_8cpp.html#a6c3d421ff2f75448e73d2e2d5bd4193f">AddTrajectoryPoint</a> (const <a class="el" href="class_dron_pose.html">DronPose</a> *pPose)</td></tr>
+<tr class="memdesc:a6c3d421ff2f75448e73d2e2d5bd4193f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje punkt do ścieżki ruchu.  <a href="#a6c3d421ff2f75448e73d2e2d5bd4193f">Więcej...</a><br /></td></tr>
+<tr class="separator:a6c3d421ff2f75448e73d2e2d5bd4193f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a359580f84d2edd509de42303e4759bc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_wektor3_d.html">Wektor3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gnuplot_visualizer_8cpp.html#a359580f84d2edd509de42303e4759bc2">RotateXY</a> (double sn, double cn, const <a class="el" href="class_wektor3_d.html">Wektor3D</a> &amp;rPnt, const <a class="el" href="class_wektor3_d.html">Wektor3D</a> &amp;rScale)</td></tr>
+<tr class="memdesc:a359580f84d2edd509de42303e4759bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotacja i skalowanie współrzędnych punktu.  <a href="#a359580f84d2edd509de42303e4759bc2">Więcej...</a><br /></td></tr>
+<tr class="separator:a359580f84d2edd509de42303e4759bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a859ec2a0d8df8dcd2986cafdf41929a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gnuplot_visualizer_8cpp.html#a859ec2a0d8df8dcd2986cafdf41929a6">TransformGeom</a> (const char *sFile_Template, const char *sFile_Target, const <a class="el" href="class_wektor3_d.html">Wektor3D</a> &amp;rTrans_m, double RotAngle_rad, const <a class="el" href="class_wektor3_d.html">Wektor3D</a> &amp;rScale)</td></tr>
+<tr class="separator:a859ec2a0d8df8dcd2986cafdf41929a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f7a66ce1ada8bb52c97bc5fb9110f61"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gnuplot_visualizer_8cpp.html#a9f7a66ce1ada8bb52c97bc5fb9110f61">WriteCurrDonPose</a> (const <a class="el" href="class_dron_pose.html">DronPose</a> *pPose)</td></tr>
+<tr class="separator:a9f7a66ce1ada8bb52c97bc5fb9110f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja definicji</h2>
+<a class="anchor" id="a557fb3b594ec9b4e1c94ca0e5e03794f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FILE_NAME__ROTOR1&#160;&#160;&#160;&quot;rotor1.dat&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="_gnuplot_visualizer_8cpp_source.html#l00015">15</a> pliku <a class="el" href="_gnuplot_visualizer_8cpp_source.html">GnuplotVisualizer.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aad25d638718874c52828f8e6d4708305"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FILE_NAME__ROTOR2&#160;&#160;&#160;&quot;rotor2.dat&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="_gnuplot_visualizer_8cpp_source.html#l00016">16</a> pliku <a class="el" href="_gnuplot_visualizer_8cpp_source.html">GnuplotVisualizer.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab913307fc5c5ba1cca06a3802dfdbaa7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FILE_NAME__ROTOR3&#160;&#160;&#160;&quot;rotor3.dat&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="_gnuplot_visualizer_8cpp_source.html#l00017">17</a> pliku <a class="el" href="_gnuplot_visualizer_8cpp_source.html">GnuplotVisualizer.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b0ee7fcb59e995dc83027e8ae84d88f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FILE_NAME__ROTOR4&#160;&#160;&#160;&quot;rotor4.dat&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="_gnuplot_visualizer_8cpp_source.html#l00018">18</a> pliku <a class="el" href="_gnuplot_visualizer_8cpp_source.html">GnuplotVisualizer.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a553abd8711c56d9e1fc8d5abc48124b0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FILE_NAME__ROTOR_TEMPLATE&#160;&#160;&#160;&quot;wzor_rotora.dat&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="_gnuplot_visualizer_8cpp_source.html#l00014">14</a> pliku <a class="el" href="_gnuplot_visualizer_8cpp_source.html">GnuplotVisualizer.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a class="anchor" id="a6c3d421ff2f75448e73d2e2d5bd4193f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AddTrajectoryPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_dron_pose.html">DronPose</a> *&#160;</td>
+          <td class="paramname"><em>pPose</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dodaje do pliku, którego nazwa jest zdefinowana przez stałą <a class="el" href="_gnuplot_visualizer_8hh.html#a828b8945a183ff45372fd7d0d2ab5bd5">FILE_NAME__DRON_BODY_VIEW</a>, współrzędne następnego punktu ścieżki ruchu drona. </p>
+
+<p>Definicja w linii <a class="el" href="_gnuplot_visualizer_8cpp_source.html#l00105">105</a> pliku <a class="el" href="_gnuplot_visualizer_8cpp_source.html">GnuplotVisualizer.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="_gnuplot_visualizer_8cpp_a6c3d421ff2f75448e73d2e2d5bd4193f_cgraph.png" border="0" usemap="#_gnuplot_visualizer_8cpp_a6c3d421ff2f75448e73d2e2d5bd4193f_cgraph" alt=""/></div>
+<map name="_gnuplot_visualizer_8cpp_a6c3d421ff2f75448e73d2e2d5bd4193f_cgraph" id="_gnuplot_visualizer_8cpp_a6c3d421ff2f75448e73d2e2d5bd4193f_cgraph">
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="_gnuplot_visualizer_8cpp_a6c3d421ff2f75448e73d2e2d5bd4193f_icgraph.png" border="0" usemap="#_gnuplot_visualizer_8cpp_a6c3d421ff2f75448e73d2e2d5bd4193f_icgraph" alt=""/></div>
+<map name="_gnuplot_visualizer_8cpp_a6c3d421ff2f75448e73d2e2d5bd4193f_icgraph" id="_gnuplot_visualizer_8cpp_a6c3d421ff2f75448e73d2e2d5bd4193f_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a359580f84d2edd509de42303e4759bc2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_wektor3_d.html">Wektor3D</a> RotateXY </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>cn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_wektor3_d.html">Wektor3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>rPnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_wektor3_d.html">Wektor3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>rScale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dokonuje rotacji i skalowania współrzędnych zadanego punktu. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sn</td><td>- sinus kąta rotacji, </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cn</td><td>- cosinus kąta rotacji, </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rPnt</td><td>- współrzędne punktu, które mają być podane rotacji i skalowaniu, </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rScale</td><td>- współczynniki skali wzdłuż każdej z osi. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>Zwaraca przetransformowane współrzędne punktu. </dd></dl>
+
+<p>Definicja w linii <a class="el" href="_gnuplot_visualizer_8cpp_source.html#l00128">128</a> pliku <a class="el" href="_gnuplot_visualizer_8cpp_source.html">GnuplotVisualizer.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="_gnuplot_visualizer_8cpp_a359580f84d2edd509de42303e4759bc2_cgraph.png" border="0" usemap="#_gnuplot_visualizer_8cpp_a359580f84d2edd509de42303e4759bc2_cgraph" alt=""/></div>
+<map name="_gnuplot_visualizer_8cpp_a359580f84d2edd509de42303e4759bc2_cgraph" id="_gnuplot_visualizer_8cpp_a359580f84d2edd509de42303e4759bc2_cgraph">
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="_gnuplot_visualizer_8cpp_a359580f84d2edd509de42303e4759bc2_icgraph.png" border="0" usemap="#_gnuplot_visualizer_8cpp_a359580f84d2edd509de42303e4759bc2_icgraph" alt=""/></div>
+<map name="_gnuplot_visualizer_8cpp_a359580f84d2edd509de42303e4759bc2_icgraph" id="_gnuplot_visualizer_8cpp_a359580f84d2edd509de42303e4759bc2_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a859ec2a0d8df8dcd2986cafdf41929a6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TransformGeom </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>sFile_Template</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>sFile_Target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_wektor3_d.html">Wektor3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>rTrans_m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>RotAngle_rad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_wektor3_d.html">Wektor3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>rScale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="_gnuplot_visualizer_8cpp_source.html#l00158">158</a> pliku <a class="el" href="_gnuplot_visualizer_8cpp_source.html">GnuplotVisualizer.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="_gnuplot_visualizer_8cpp_a859ec2a0d8df8dcd2986cafdf41929a6_cgraph.png" border="0" usemap="#_gnuplot_visualizer_8cpp_a859ec2a0d8df8dcd2986cafdf41929a6_cgraph" alt=""/></div>
+<map name="_gnuplot_visualizer_8cpp_a859ec2a0d8df8dcd2986cafdf41929a6_cgraph" id="_gnuplot_visualizer_8cpp_a859ec2a0d8df8dcd2986cafdf41929a6_cgraph">
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="_gnuplot_visualizer_8cpp_a859ec2a0d8df8dcd2986cafdf41929a6_icgraph.png" border="0" usemap="#_gnuplot_visualizer_8cpp_a859ec2a0d8df8dcd2986cafdf41929a6_icgraph" alt=""/></div>
+<map name="_gnuplot_visualizer_8cpp_a859ec2a0d8df8dcd2986cafdf41929a6_icgraph" id="_gnuplot_visualizer_8cpp_a859ec2a0d8df8dcd2986cafdf41929a6_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f7a66ce1ada8bb52c97bc5fb9110f61"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WriteCurrDonPose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_dron_pose.html">DronPose</a> *&#160;</td>
+          <td class="paramname"><em>pPose</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Zapisanie pliku z zaktualnymi współrzędnymi wierzchołków bryły opisującej drona. Ze względu na specyfikę sposobu rysowania powierzchni przez program gnuplot, format wejściowy i wyjściowy pliku musi zostać zachowany, tzn. muszą być zachwane przerwy w postaci wolnych linii między kolejnymi zbiorami wierzchołków, które stanowią tworzącą rysowanej siatki danej powierzchni. Ta funkcja to zapewnia. </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pPose</td><td>- wskaźnik na obiekt zawierający dane dotyczące aktualnej pozy drona.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Ostrzeżenie</dt><dd>W tej funkcji brakuje uwzględnienia rotacji, która pozwoli odzwierciedlić aktualną orientację drona. W kodzie funkcji jest zaznaczone miejsce, w którym należy wpisać odpowiedni kod. </dd></dl>
+
+<p>Definicja w linii <a class="el" href="_gnuplot_visualizer_8cpp_source.html#l00225">225</a> pliku <a class="el" href="_gnuplot_visualizer_8cpp_source.html">GnuplotVisualizer.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="_gnuplot_visualizer_8cpp_a9f7a66ce1ada8bb52c97bc5fb9110f61_cgraph.png" border="0" usemap="#_gnuplot_visualizer_8cpp_a9f7a66ce1ada8bb52c97bc5fb9110f61_cgraph" alt=""/></div>
+<map name="_gnuplot_visualizer_8cpp_a9f7a66ce1ada8bb52c97bc5fb9110f61_cgraph" id="_gnuplot_visualizer_8cpp_a9f7a66ce1ada8bb52c97bc5fb9110f61_cgraph">
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="_gnuplot_visualizer_8cpp_a9f7a66ce1ada8bb52c97bc5fb9110f61_icgraph.png" border="0" usemap="#_gnuplot_visualizer_8cpp_a9f7a66ce1ada8bb52c97bc5fb9110f61_icgraph" alt=""/></div>
+<map name="_gnuplot_visualizer_8cpp_a9f7a66ce1ada8bb52c97bc5fb9110f61_icgraph" id="_gnuplot_visualizer_8cpp_a9f7a66ce1ada8bb52c97bc5fb9110f61_icgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="_gnuplot_visualizer_8cpp.html">GnuplotVisualizer.cpp</a></li>
+    <li class="footer">Wygenerowano Śr, 30 lis 2016 20:56:18 dla Interpreter programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

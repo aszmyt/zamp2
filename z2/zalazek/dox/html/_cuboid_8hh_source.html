@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>parserXML: Plik źródłowy Cuboid.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">parserXML
+   </div>
+   <div id="projectbrief">2000</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.11 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_cuboid_8hh_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Cuboid.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_cuboid_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CUBOID_HH</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CUBOID_HH</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_wektor3_d_8hh.html">Wektor3D.hh</a>&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_cuboid.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cuboid.html">Cuboid</a> {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_cuboid.html#a2d44cfb76df6f5c28de91f9a27cd5046">   25</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_cuboid.html#a2d44cfb76df6f5c28de91f9a27cd5046">~Cuboid</a>() {}</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_cuboid.html#ac461206daec7270fae10de7bd93aa8bc">   33</a></span>&#160;  <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="class_wektor3_d.html">Wektor3D</a> &amp;<a class="code" href="class_cuboid.html#ac461206daec7270fae10de7bd93aa8bc">GetCenter</a>(){<span class="keywordflow">return</span> <a class="code" href="class_cuboid.html#a259fd6672074649259c6c07d86c8f90a">Center</a>;}</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// virtual const Wektor3D &amp;GetCenter() const = 0{return Center;}</span></div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_cuboid.html#a84427684d92fb939e8cfcb2c815d940e">   45</a></span>&#160;<span class="comment"></span>  <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="class_wektor3_d.html">Wektor3D</a> &amp;<a class="code" href="class_cuboid.html#a84427684d92fb939e8cfcb2c815d940e">GetSize</a>() {<span class="keywordflow">return</span> <a class="code" href="class_cuboid.html#ad09ffba16d233668c2919b9ea2488092">Size</a>;}</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="comment">//virtual const Wektor3D &amp;GetSize() const = 0{return Size;}</span></div><div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_cuboid.html#ad4ab95061ca2e19aa7e2c890eb345e22">   52</a></span>&#160;<span class="comment"></span>  <span class="keywordtype">void</span> <a class="code" href="class_cuboid.html#ad4ab95061ca2e19aa7e2c890eb345e22">SetSize</a>(<a class="code" href="class_wektor3_d.html">Wektor3D</a> size){</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_cuboid.html#ad09ffba16d233668c2919b9ea2488092">Size</a>.<a class="code" href="class_wektor3_d.html#ad0c31a932da0869dd3ef99ed6e8025c1">x</a>()=size.<a class="code" href="class_wektor3_d.html#ad0c31a932da0869dd3ef99ed6e8025c1">x</a>();</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="class_cuboid.html#ad09ffba16d233668c2919b9ea2488092">Size</a>.<a class="code" href="class_wektor3_d.html#a470e6aadf3fca3101398c9326f20bfa6">y</a>()=size.<a class="code" href="class_wektor3_d.html#a470e6aadf3fca3101398c9326f20bfa6">y</a>();</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="class_cuboid.html#ad09ffba16d233668c2919b9ea2488092">Size</a>.<a class="code" href="class_wektor3_d.html#a79389ab1455820e0ad030350668d91d7">z</a>()=size.<a class="code" href="class_wektor3_d.html#a79389ab1455820e0ad030350668d91d7">z</a>();</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div><div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_cuboid.html#a057fd804be6a022ec22411eb5b9a3073">   62</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_cuboid.html#a057fd804be6a022ec22411eb5b9a3073">SetCenter</a>(<a class="code" href="class_wektor3_d.html">Wektor3D</a> center){</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="class_cuboid.html#a259fd6672074649259c6c07d86c8f90a">Center</a>.<a class="code" href="class_wektor3_d.html#ad0c31a932da0869dd3ef99ed6e8025c1">x</a>()=center.<a class="code" href="class_wektor3_d.html#ad0c31a932da0869dd3ef99ed6e8025c1">x</a>();</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_cuboid.html#a259fd6672074649259c6c07d86c8f90a">Center</a>.<a class="code" href="class_wektor3_d.html#a470e6aadf3fca3101398c9326f20bfa6">y</a>()=center.<a class="code" href="class_wektor3_d.html#a470e6aadf3fca3101398c9326f20bfa6">y</a>();</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="class_cuboid.html#a259fd6672074649259c6c07d86c8f90a">Center</a>.<a class="code" href="class_wektor3_d.html#a79389ab1455820e0ad030350668d91d7">z</a>()=center.<a class="code" href="class_wektor3_d.html#a79389ab1455820e0ad030350668d91d7">z</a>();</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_cuboid.html#a259fd6672074649259c6c07d86c8f90a">   73</a></span>&#160;  <a class="code" href="class_wektor3_d.html">Wektor3D</a> <a class="code" href="class_cuboid.html#a259fd6672074649259c6c07d86c8f90a">Center</a>;</div><div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_cuboid.html#ad09ffba16d233668c2919b9ea2488092">   79</a></span>&#160;  <a class="code" href="class_wektor3_d.html">Wektor3D</a> <a class="code" href="class_cuboid.html#ad09ffba16d233668c2919b9ea2488092">Size</a>;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  </div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_wektor3_d_html_a79389ab1455820e0ad030350668d91d7"><div class="ttname"><a href="class_wektor3_d.html#a79389ab1455820e0ad030350668d91d7">Wektor3D::z</a></div><div class="ttdeci">double z() const </div><div class="ttdoc">Udostępia do odczytu współrzędną z-ową. </div><div class="ttdef"><b>Definition:</b> <a href="_wektor3_d_8hh_source.html#l00093">Wektor3D.hh:93</a></div></div>
+<div class="ttc" id="class_cuboid_html_ad09ffba16d233668c2919b9ea2488092"><div class="ttname"><a href="class_cuboid.html#ad09ffba16d233668c2919b9ea2488092">Cuboid::Size</a></div><div class="ttdeci">Wektor3D Size</div><div class="ttdoc">Długości boków prostopadłościanu. </div><div class="ttdef"><b>Definition:</b> <a href="_cuboid_8hh_source.html#l00079">Cuboid.hh:79</a></div></div>
+<div class="ttc" id="class_cuboid_html_ad4ab95061ca2e19aa7e2c890eb345e22"><div class="ttname"><a href="class_cuboid.html#ad4ab95061ca2e19aa7e2c890eb345e22">Cuboid::SetSize</a></div><div class="ttdeci">void SetSize(Wektor3D size)</div><div class="ttdoc">Zapisuje dlugości boków prostopadłościanu. </div><div class="ttdef"><b>Definition:</b> <a href="_cuboid_8hh_source.html#l00052">Cuboid.hh:52</a></div></div>
+<div class="ttc" id="class_cuboid_html_a259fd6672074649259c6c07d86c8f90a"><div class="ttname"><a href="class_cuboid.html#a259fd6672074649259c6c07d86c8f90a">Cuboid::Center</a></div><div class="ttdeci">Wektor3D Center</div><div class="ttdoc">Środek prostopadłościanu. </div><div class="ttdef"><b>Definition:</b> <a href="_cuboid_8hh_source.html#l00073">Cuboid.hh:73</a></div></div>
+<div class="ttc" id="class_wektor3_d_html_a470e6aadf3fca3101398c9326f20bfa6"><div class="ttname"><a href="class_wektor3_d.html#a470e6aadf3fca3101398c9326f20bfa6">Wektor3D::y</a></div><div class="ttdeci">double y() const </div><div class="ttdoc">Udostępia do odczytu współrzędną y-ową. </div><div class="ttdef"><b>Definition:</b> <a href="_wektor3_d_8hh_source.html#l00084">Wektor3D.hh:84</a></div></div>
+<div class="ttc" id="class_cuboid_html"><div class="ttname"><a href="class_cuboid.html">Cuboid</a></div><div class="ttdoc">Klasa bazowa dla modelowania prostopadłościanów. </div><div class="ttdef"><b>Definition:</b> <a href="_cuboid_8hh_source.html#l00017">Cuboid.hh:17</a></div></div>
+<div class="ttc" id="_wektor3_d_8hh_html"><div class="ttname"><a href="_wektor3_d_8hh.html">Wektor3D.hh</a></div></div>
+<div class="ttc" id="class_wektor3_d_html_ad0c31a932da0869dd3ef99ed6e8025c1"><div class="ttname"><a href="class_wektor3_d.html#ad0c31a932da0869dd3ef99ed6e8025c1">Wektor3D::x</a></div><div class="ttdeci">double x() const </div><div class="ttdoc">Udostępia do odczytu współrzędną x-ową. </div><div class="ttdef"><b>Definition:</b> <a href="_wektor3_d_8hh_source.html#l00075">Wektor3D.hh:75</a></div></div>
+<div class="ttc" id="class_cuboid_html_a84427684d92fb939e8cfcb2c815d940e"><div class="ttname"><a href="class_cuboid.html#a84427684d92fb939e8cfcb2c815d940e">Cuboid::GetSize</a></div><div class="ttdeci">virtual const Wektor3D &amp; GetSize()</div><div class="ttdoc">Udostępnia długości boków prostopadłościanu. </div><div class="ttdef"><b>Definition:</b> <a href="_cuboid_8hh_source.html#l00045">Cuboid.hh:45</a></div></div>
+<div class="ttc" id="class_cuboid_html_ac461206daec7270fae10de7bd93aa8bc"><div class="ttname"><a href="class_cuboid.html#ac461206daec7270fae10de7bd93aa8bc">Cuboid::GetCenter</a></div><div class="ttdeci">virtual const Wektor3D &amp; GetCenter()</div><div class="ttdoc">Udostępnia współrzędne środka prostopadłościanu. </div><div class="ttdef"><b>Definition:</b> <a href="_cuboid_8hh_source.html#l00033">Cuboid.hh:33</a></div></div>
+<div class="ttc" id="class_cuboid_html_a057fd804be6a022ec22411eb5b9a3073"><div class="ttname"><a href="class_cuboid.html#a057fd804be6a022ec22411eb5b9a3073">Cuboid::SetCenter</a></div><div class="ttdeci">void SetCenter(Wektor3D center)</div><div class="ttdoc">Zapisuje środek prostopadłościanu. </div><div class="ttdef"><b>Definition:</b> <a href="_cuboid_8hh_source.html#l00062">Cuboid.hh:62</a></div></div>
+<div class="ttc" id="class_cuboid_html_a2d44cfb76df6f5c28de91f9a27cd5046"><div class="ttname"><a href="class_cuboid.html#a2d44cfb76df6f5c28de91f9a27cd5046">Cuboid::~Cuboid</a></div><div class="ttdeci">virtual ~Cuboid()</div><div class="ttdoc">Destruktor wirtualny dla poprawnej destrukcji obiektu. </div><div class="ttdef"><b>Definition:</b> <a href="_cuboid_8hh_source.html#l00025">Cuboid.hh:25</a></div></div>
+<div class="ttc" id="class_wektor3_d_html"><div class="ttname"><a href="class_wektor3_d.html">Wektor3D</a></div><div class="ttdoc">Wektor z przestrzeni 3D. </div><div class="ttdef"><b>Definition:</b> <a href="_wektor3_d_8hh_source.html#l00020">Wektor3D.hh:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="_cuboid_8hh.html">Cuboid.hh</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

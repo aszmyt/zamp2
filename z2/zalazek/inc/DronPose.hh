@@ -52,9 +52,7 @@ class DronPose {
     *
     *  Ustawia wartości współrzędnych kartezjańskich pozycji
     *  robota.
-    *  \param[in] rWsp - usawiana wartość współrzędnej \e x-owej
-    *                    wyrażonej w metrach,
-    *  \param[in] y_m - usawiana wartość współrzędnej \e y-owej
+    *  \param[in] rWsp_m, - usawiana wartość współrzędnej \e x-owej
     *                    wyrażonej w metrach,
     */
    void SetPos_m( const Wektor3D &  rWsp_m )
@@ -66,14 +64,12 @@ class DronPose {
     *
     *  Ustawia wartości kąta orientacji robota.
     *  Po wykonaniu tej operacji wywołana zostaje metoda
-    *  \link DronPose::AfterUpdate AfterUpdate()\endlink.
-    *  \param[in] angle_deg - ustawiana wartość kąta orientacji 
+    *  \param[in] Angle_deg - ustawiana wartość kąta orientacji 
     *                   robota wyrażona w stopniach.
     */
    void SetAngle_deg( double Angle_deg )
     {
-      _Angle_deg += Angle_deg;
-	if(_Angle_deg>360) _Angle_deg -=360;
+      _Angle_deg = Angle_deg;
     }
    /*!
     * \brief Udostępnia wartości współrzędnych pozy robota
@@ -89,7 +85,8 @@ class DronPose {
    *
    * Udostępnia kąt orientacji drona. Kąt wyrażony jest w stopniach.
    */
-   double GetAngle_deg( double angle_deg ) const
+  //double GetAngle_deg( double angle_deg ) const
+   double GetAngle_deg() const
     {
       return _Angle_deg;
     }

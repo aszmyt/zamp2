@@ -1,0 +1,26 @@
+digraph "DronPose::GetPos_m"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="DronPose::GetPos_m",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="Colision::Coli",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_colision.html#afb5c4c9d16a62767861eac6b11614126",tooltip="Sprawdza czy nastąpiła kolizja. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="ExecCommands",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#a4043c077a1c7ff0754ed53b3e2945bb5"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="menu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ad16e5e62f3579a7048e6b981b172885e"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="AddTrajectoryPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_gnuplot_visualizer_8cpp.html#a6c3d421ff2f75448e73d2e2d5bd4193f",tooltip="Dodaje punkt do ścieżki ruchu. "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="GnuplotVisualizer::Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gnuplot_visualizer.html#a2838d8dfb9a8e5f1c383f59f2dd2d9a1"];
+  Node7 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="WriteCurrDonPose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_gnuplot_visualizer_8cpp.html#a9f7a66ce1ada8bb52c97bc5fb9110f61"];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="Interp4Turn::ExecCmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_interp4_turn.html#a5af667015f412dbe5e0082aea6c33142",tooltip="Wykonuje zadanie dla danej wtyczki i wyświetla pozycję drona. "];
+}

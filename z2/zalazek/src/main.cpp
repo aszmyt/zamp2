@@ -1,19 +1,30 @@
+#define LINE_LEN 100
+#include<sstream>
+#include<cstdlib>
+#include<readline/readline.h>
+#include<readline/history.h>
+
+#include <iomanip>
 #include <iostream>
 #include <dlfcn.h>
 #include <cassert>
-#include <iomanip>
 #include <list>
 #include "Interp4Command.hh"
+#include "Manager4Plugins.hh"
 #include "GnuplotVisualizer.hh"
-#include <map>
-#include <fstream>
+#include "xmlparser4scene.hh"
+#include "Wtyczka.hh"
+#include "Scene.hh"
 #include <sstream>
-
-#define _MAX 99
+#include "Colision.hh"
 
 using namespace std;
 
 
+/*!
+ * Wyświetla proste menu.
+ *
+ */
 void menu(void)
 {
   cout<<"w - wczytanie nazwy pliku sekwencji instrukcji dla drona"<<endl;
@@ -22,153 +33,106 @@ void menu(void)
   cout<<"s - start wykonywania sekwencji instrukcji"<<endl;
   cout<<"a - dodaj nowa wtyczke"<<endl;
   cout<<"d - usun wtyczke"<<endl;
-  cout<<"? - wyswietl ponownie menu"<<endl<<endl;
-  cout<<"k - koniec dzialania programu"<<endl;
+  cout<<"? - wyswietl ponownie menu"<<endl;
+  cout<<"\nk - koniec dzialania programu"<<endl;
 }
 
-void Del_plugins(void);
-int Add_plugin(char const *);
-void Del_plugin();
+
+/******************************************/
+  /*!
+    * 	Sczytuje z pliku zadania dla drona i wyswietla je
+    *  \param[in] FileName - Nazwa pliku z zadaniami
+    *  \param[in] slownik  - manger wtyczek
+    *
+    * \retval true  - jesli wczytanie parametrów zakończyło się powodzeniem,
+    * \retval false - w przypadku przeciwnym.
+    *
+    */
+bool PrintCommands(string FileName,Manager4Plugins &slownik);
+  /*!
+    * 	Sczytuje z pliku zadania dla drona i wykonuje je
+    *  \param[in] FileName - Nazwa pliku z zadaniami
+    *  \param[in] slownik  - manger wtyczek
+    *  \param[in] pRobPose - pozycja drona w przestrzeni 3D
+    *  \param[in] pVis - wizualizacja drona
+    *
+    * \retval true  - jesli wczytanie parametrów zakończyło się powodzeniem,
+    * \retval false - w przypadku przeciwnym.
+    *
+    */
+bool ExecCommands(string FileName,Manager4Plugins &slownik,DronPose *pRobPose		  ,Visualization *pVis,Scene *scn);
 
 
-void *LibHandler[_MAX];
-
-Interp4Command * pCmd[_MAX];
 
 /*!
-Zarzadca wtyczek odpowiedzialny za magazynowanie informacji oraz wskaznikow do danej wtyczki
-*/
-class ZarzadcaWtyczek {
-
-public:
-  map<string, Interp4Command*>_ZbWtyczek;
-  ~ZarzadcaWtyczek(){}
-};
-
-
-
-
-
-ZarzadcaWtyczek wtyczki;
-
-int plugins = 0;
-
+  * Główna funkcja programu. Obsługuje prosty interfejst i steruje programem.
+  *
+  */ 
 int main()
 {
+  char opcja='?', *sLiniaPolecenia;
+  const char *sZacheta ="Twoj wybor (? - menu): ";
+  string plik,wtyczka,komenda; 
+  Manager4Plugins slownik;
   DronPose            DPose;
   GnuplotVisualizer   PlotVis;
-  DPose.SetPos_m(0,0,0);
-  PlotVis.Draw(&DPose);
+  istringstream StrmWe;
+  Scene* scn;
 
 
-  fstream file;
-  char opcja;
-  string plik,wtyczka,komenda,wyraz; 
  
+  rl_bind_key('\t',rl_complete);
+  DPose.SetPos_m(0,0,0);
+ 
+  slownik.AddPlugin("Interp4Fly.so");
+  slownik.AddPlugin("Interp4Rotate.so");
+  slownik.AddPlugin("Interp4Turn.so");
+  slownik.AddPlugin("Interp4Scene.so");
+  slownik.AddPlugin("Interp4Pause.so");  
+    
+ 
+    do{
   
-  /*! 
-    Menu do realizacji pracy calego programu
-   */    
-  menu();
-  while(opcja!='k'){
-    cout<<"Twoj wybor (? - menu): ";
-    cin>>opcja;
     
     switch( opcja )
       {
       case 'w':
 	cout<<"Podaj nazwe pliku: ";
 	cin>>plik;
-	file.open(plik);
-	if( file.good() == true)
-	  {
-	    cout<< " Uzyskano dostep do pliku!"<< endl;
-	  }
-	else
-	  cout<< "brak dostepu do pliku" <<endl;
+scn=PlotVis.Wskaznik();
+
 	break;  
       case 'p':
-
- 	if(plugins==0)
-	  cout<<"Brak wtyczek"<<endl;
-	else
-	  for(int i=0;i<plugins;i++){
-	    pCmd[i]->PrintSyntax();
-	    
-	  }
+	if(!PrintCommands(plik,slownik))
+	  cout<<"Blad przy probie odczytu pliku: "<<plik<<endl;
 	break;
       case 'i':
-	if(plugins==0)
-	  cout<<"Brak wtyczek"<<endl;
-	else
-	  for(int i=0;i<plugins;i++){
-	    cout<<pCmd[i]->GetCmdName()<<endl;
-	    
-	  }
+	cout<<endl;
+	slownik.PrintPlugins();
+	cout<<endl;
+  	
 	break;
-	/*!
-	  Funkcja realizacji sekwencji:
-	  \li program wyciaga linie z pliku ktory zostal otwarty wczesniej i wprowadza go do buffowa
-	  \li z buffora zostaje wyciagniety pierwszy wyraz ktory sluzy jako informator dla zarzadcy, ktora wtyczne nalezy wybrac.
-	  \li reszta bufforu zostaje przekierowana do odpowiedniej wtyczki aby wykonac sekwencje i zrealizowac ruch.
-	  \li w przypadku gdy nie ma takiej wtyczki to autoamtycznie zostaje ona dodana oraz wykonana
-	*/
       case 's':
-	{
-
-	  do
-	    {
-	      getline(file,wyraz);
-	      if(wyraz.length()!=0){
-		istringstream st(wyraz);
-		string wartosc;
-		st>>wartosc;
-		if(wtyczki._ZbWtyczek[wartosc]!=0){
-		  wtyczki._ZbWtyczek[wartosc]->ReadParams(st);
-		  wtyczki._ZbWtyczek[wartosc]->ExecCmd(&DPose,&PlotVis);
-		  wtyczki._ZbWtyczek[wartosc]->PrintCmd();
-		}
-		else {
-		  wtyczka="Interp4"+wartosc+".so";
-		  Add_plugin(wtyczka.c_str());
-		  wtyczki._ZbWtyczek[wartosc]->ReadParams(st);
-		  wtyczki._ZbWtyczek[wartosc]->ExecCmd(&DPose,&PlotVis);
-		  wtyczki._ZbWtyczek[wartosc]->PrintCmd();}
-	      }
-	    }while(!file.eof());
+	if(!ExecCommands(plik,slownik,&DPose,&PlotVis,scn))
+	  cout<<"Blad przy probie wykonania pliku: "<<plik<<endl;
+	for (int i=1; i < 20; ++i) {
+	  PlotVis.Draw(&DPose);
+	  usleep(100000);  // Pauza 0,1 sek.
 	}
+	
 	break;
-	/*!
-	  Funkcja odpowiedzialna za dodawanie wtyczke:
-	  \li zarzadca sprawdza czy jest juz taka wtyczka wprowadzona do systemu i jesli wykaze ze jest to nie pozwala na ponowne jej wprowadzenie.
-	  \li jesli zarzadca uzna ze wtyczki nie ma w systemie to inicjuje sekwencje dodawania.
-	*/
       case 'a':
-	if(plugins>=_MAX){
-	  cout<<"Za duzo wtyczek. Usun jakas wtyczke "<<endl;
-	  break;
-	}
-	else{
 	  cout<<"Podaj nazwe wtyczki: ";
 	  cin>>wtyczka;
-	  if(wtyczki._ZbWtyczek[wtyczka]!=0)	
-	    cout<<"jest juz taka wtyczka"<<endl;
-	  else
-	    {
-	      wtyczka="Interp4"+wtyczka+".so";
-	      Add_plugin(wtyczka.c_str());
-	    }
+	  slownik.AddPlugin(wtyczka.c_str());
 	  break;
-	}
-	/*!
-	  Funcja odpowiedzialna za usuwanie ostatniej dodanej wtyczki
-	*/
       case 'd':
-	if(plugins==0)
-	  cout<<"Brak wtyczek"<<endl;
-	else{
-	  Del_plugin();
-	}
+	  cout<<"Podaj nazwe komendy do usuniecia: ";
+	  cin>>komenda;
+	  if(slownik.DeletePlugin(komenda))
+	    cout<<"Pomyslnie usunieto wtyczke"<<endl;
+	  else
+	    cout<<"Nie ma takiej komendy"<<endl;
 	break; 
       case '?':
 	menu();
@@ -180,54 +144,97 @@ int main()
 	cout<<"Nie ma takiej opcji"<<endl;
 	break;
       }
-  }  
+    sLiniaPolecenia = readline(sZacheta);
+    if(!sLiniaPolecenia)return 0;
+    add_history(sLiniaPolecenia);
+    StrmWe.str(sLiniaPolecenia);
+    free(sLiniaPolecenia);
+    
+    }  while(StrmWe>>opcja,opcja!='k');
 
-  Del_plugins();
-}
-/*!
-Funkcja odpowiedzialna za dodawanie do systemu wtyczki
-\li wtyczka jest wpisywana do zarzadcy, aby umozliwic pozniejsza identyfikacje znajdujacych sie w nim wtyczek
-*/
-int Add_plugin(char const * wtyczka){
-  LibHandler[plugins] = dlopen(wtyczka,RTLD_LAZY);
-  Interp4Command *(*pCreateCmd)(void);
-  void *pFun;
+  slownik.DeletePlugins();
+  
 
-  if (!LibHandler[plugins]) {
-    cerr << "!!! Brak biblioteki: "<<wtyczka << endl;
-    return 1;
-  }
-
-  pFun = dlsym(LibHandler[plugins],"CreateCmd");
-  if (!pFun) {
-    cerr << "!!! Nie znaleziono funkcji CreateCmd" << endl;
-    return 1;
-  }
-
-  pCreateCmd = *reinterpret_cast<Interp4Command* (**)(void)>(&pFun);  
-  pCmd[plugins]=pCreateCmd();
-  wtyczki._ZbWtyczek[pCmd[plugins]->GetCmdName()]= pCmd[plugins];
-  plugins++;
-
-
-  return 0;
-}
-/*!
-Funkcja usuwa wszystkie wtyczki ktore zostaly wprowadzone do systemu,aby nie pozostawic zagubionych danych. .
-*/
-void Del_plugin()
-{
-  delete pCmd[plugins-1];
-  dlclose(LibHandler[plugins-1]);
-  plugins--;
 }
 
-void Del_plugins(void){
-  for(int i=0;i<plugins;i++){
-    delete pCmd[i];
-    dlclose(LibHandler[i]);
+
+
+
+bool PrintCommands(string FileName,Manager4Plugins & slownik){
+  string f_comm_part = "cpp -P ";
+  std::ostringstream ostr;
+  std::istringstream istr;
+  char line [LINE_LEN];
+  string word;
+
+  FILE *pFile = popen((f_comm_part+FileName).c_str(),"r");//otwieramy plik i uruchamiamy preprocesor
+  
+  
+  
+  while(fscanf(pFile,"%100s",line)==1){//zapisujemy dane do strumienia
+    ostr<<line<<endl;
   }
+  pclose(pFile);
+  
+  istr.str(ostr.str());  //przepisujemy strumienie
  
+
+  istr>>word; 
+        //sczytujemy rodzaj komendy i sprawdzamy czy wszystko OK
+  while(!istr.eof()&&istr.good()){
+ 
+
+ 
+    //sczytujemy rodzaj komendy
+    if(!slownik.ReadParameters(istr,word)){
+      return false;     
+    }
+    if(!slownik.PrintParameters(word)){//wyświetlamy zadania
+      return false;
+    }
+
+    istr>>word;
+  }
+  
+  return true;
+}
+
+bool ExecCommands(string FileName,Manager4Plugins &slownik,DronPose *pRobPose, Visualization *pVis,Scene *scn){
+  string f_comm_part = "cpp -P ";
+  std::ostringstream ostr;
+  std::istringstream istr;
+  char line [LINE_LEN];
+  string word;
+  Colision coli;
+ 
+  FILE *pFile = popen((f_comm_part+FileName).c_str(),"r");//otwieramy plik i uruchamiamy preprocesor
+  
+  
+  while(fscanf(pFile,"%100s",line)==1){ //zapisujemy dane do strumienia
+    ostr<<line<<endl;
+  }
+  pclose(pFile);
+  
+  istr.str(ostr.str());  //przepisujemy strumienie
+ 
+
+  istr>>word; 
+        
+  while(!istr.eof()&&istr.good()){ 
+
+    //sczytujemy rodzaj komendy i sprawdzamy czy wszystko OK
+    if(!slownik.ReadParameters(istr,word)){
+      return false;     
+    }
+    if(!slownik.ExecuteCommand(word,pRobPose,pVis,scn)){  //wykonujemy zadanie
+        return false;
+    }
+    if(coli.Coli(pRobPose,scn)==true) {cout<<endl<<"trafiono w przeszkode!!"<<endl; break;}//sprawdzamy czy trafiono w przeszkode
+    istr>>word;
+  }
+  
+
+  return true;
 }
 
 

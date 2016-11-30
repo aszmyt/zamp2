@@ -1,7 +1,5 @@
 #include <iostream>
 #include "Interp4Fly.hh"
-#include <unistd.h>
-#include <cmath>
 
 using std::cout;
 using std::endl;
@@ -16,7 +14,7 @@ extern "C" {
 
 /*!
  * \brief
- *Wtyczka FLY odpowiedzialna za lot drona w trzech plaszczyznach
+ *
  *
  */
 Interp4Command* CreateCmd(void)
@@ -26,23 +24,26 @@ Interp4Command* CreateCmd(void)
 
 
 /*!
- *nastepuje ustawienie poczatkowych wartosci
+ *
  */
-Interp4Fly::Interp4Fly(): _hor_speed(0), _ver_speed(0), _dist(0)
+Interp4Fly::Interp4Fly(): _Speed_mpS(0),_verSpeed_mpS(0),_distance_m(0)
 {}
 
 
 /*!
- *Funkcja wyswietla wartosci ustawione we wtyczce
+ *
  */
 void Interp4Fly::PrintCmd() const
 {
-  cout << GetCmdName() << " " << _hor_speed  << " " << _ver_speed<< " " << _dist << endl;
+  /*
+   *  Tu trzeba napisać odpowiednio zmodyfikować kod poniżej.
+   */
+  cout << GetCmdName() << " " << _Speed_mpS  << " " << _verSpeed_mpS << " " <<_distance_m<< endl;
 }
 
 
 /*!
- * Funkcja zwraca nazwe wtyczki
+ *
  */
 const char* Interp4Fly::GetCmdName() const
 {
@@ -51,32 +52,37 @@ const char* Interp4Fly::GetCmdName() const
 
 
 /*!
- * Algorytm interpretujacy dane otrzymane przez buffor do wykonania ruchu w odpowietniej plaszczyznie, w zaleznosci od ustawienia drona plaszczyzny po ktorych sie porusza zmieniaja sie.
+ *
  */
-bool Interp4Fly::ExecCmd( DronPose     *pRobPose,  Visualization *pVis) const
+bool Interp4Fly::ExecCmd( DronPose     *pRobPose,  Visualization *pVis,Scene *scn) const
 {
-double x,y,z,c,d;
-
-
-	d=pRobPose->GetAngle_deg(d);
-	c=sqrt(pow(_hor_speed,2)+pow(_ver_speed,2));
-	c=_dist/c;
-	z=c*_ver_speed;
-	cout<<"d="<<d;
-	if((d>0 && d<90) || (d>90 && d<180) || (d>180 && d<270) || (d>270 && d<360) ) 
-	{
-		y=sin(d)*_hor_speed;
-		x=sin(d)*_hor_speed;
-		pRobPose->SetPos_m(x,y,z); cout<<x<<" "<<y<<" "<<z<<" "<<endl; }
-	else if(d==0 || d==180) { x=c*_hor_speed;
-	pRobPose->SetPos_m(0,x,z);}
-	else {y=c*_hor_speed; pRobPose->SetPos_m(y,0,z);}
+  //nie wykonujemy zadnego ruchu
+  if(_Speed_mpS==0 && _verSpeed_mpS==0)
+    return true;
   
+  double kat,x,x_1,y_1,y,z,czas,predkosc;
+  kat=pRobPose->GetAngle_deg();
+  
+
+
+  //predkosc jest wypadkowa v_ver. i v_hor.
+  predkosc=sqrt(pow(_Speed_mpS,2)+pow(_verSpeed_mpS,2));
+  czas = _distance_m/predkosc;
+  y_1=cos(kat*(M_PI/180))*(_Speed_mpS*czas);
+  x_1=sin(kat*(M_PI/180))*(_Speed_mpS*czas);
+  //obliczamy nowe wspolzedne
+  z=_verSpeed_mpS*czas;
+  x=x_1;
+  y=y_1;
+
+  for(int i=0;i<20;i++){
+  pRobPose->SetPos_m(x/20,y/20,z/20);
   pVis->Draw(pRobPose);
-  usleep(800000);  // Pauza 0,8 sek.
-  /*
-   * 
-   */
+  usleep(czas*100000/10);
+}
+  usleep(czas*100000);
+  
+
   return true;
 }
 
@@ -86,13 +92,11 @@ double x,y,z,c,d;
  */
 bool Interp4Fly::ReadParams(std::istream& Strm_CmdsList)
 {
-
-Strm_CmdsList>>_hor_speed>>_ver_speed>>_dist;
-
   /*
    *  Tu trzeba napisać odpowiedni kod.
    */
-  return true;
+ 
+  return (Strm_CmdsList>>_Speed_mpS>>_verSpeed_mpS>>_distance_m);
 }
 
 

@@ -16,43 +16,57 @@
  */
 
 /*!
- * \brief Modeluje polecenie dla robota mobilnego, które wymusza jego ruch do przodu
+ * \brief Modeluje polecenie dla robota mobilnego, które wymusza jego ruch horyzontalnie oraz wertykalnie
  *
- *  Klasa modeluje ...
+ *  Klasa modeluje polecenie dla robota mobilnego, które wymusza jego ruch horyzontalnie oraz wertykalnie
  */
 class Interp4Fly: public Interp4Command {
-  /*
-   *  Tu należy zdefiniować pola, które są niezbędne
-   *  do przechowywania wartości parametrów danego polecenia.
-   *  Ponieżej zdefiniowane jest tylko jedno pole jako przykład.
-   */
-  double  _hor_speed;
-  double  _ver_speed;
-  double  _dist;
+   /*!
+     * \brief predkosć horyzontalna
+     */	
+  double  _Speed_mpS;//horizontal
+   /*!
+     * \brief predkość wertykalna
+     */	
+  double  _verSpeed_mpS;
+   /*!
+     * \brief długość drogi
+     */	
+  double  _distance_m;
  public:
   /*!
-   * \brief
+   * \brief konstruktor
    */
   Interp4Fly();  
   /*!
-   * \brief
+   * \brief Wyświetla komendę oraz parametry
    */
   virtual void PrintCmd() const;
   /*!
-   * \brief
+   * \brief Wyswietla nazwy paramwetrów oraz jednostki
    */
   virtual void PrintSyntax() const;
   /*!
-   * \brief
+   * \brief Zwraca nazwę komendy
    */
   virtual const char* GetCmdName() const;
-  /*!
-   * \brief
-   */
-  virtual bool ExecCmd( DronPose  *pRobPose,   Visualization *pVis) const;
-  /*!
-   * \brief
-   */
+ /*!
+    *  \brief Wykonuje zadanie dla danej wtyczki i wyświetla pozycję drona.  
+    *  \param[in] pRobPose - pozycja drona w układzie współrzędnych
+    *  \param[in] pVis - wizualizacja pozycji drona	
+    *
+    * \retval true  - jesli wykonywanie zadania zakończyło się powodzeniem,
+    * \retval false - w przypadku przeciwnym.
+    *
+    */
+  virtual bool ExecCmd( DronPose  *pRobPose,   Visualization *pVis, Scene *scn) const;
+   /*!
+    *  \brief Zapisuje wczytane parametry z bufora wejściowego do odpowiedniej wtyczki.
+    *  \param[in] Strm_CmdsList - bufor wejściowy
+    *
+    * \retval true  - jesli wczytanie parametrów zakończyło się powodzeniem,
+    * \retval false - w przypadku przeciwnym.
+    */
   virtual bool ReadParams(std::istream& Strm_CmdsList);
   /*!
    * \brief

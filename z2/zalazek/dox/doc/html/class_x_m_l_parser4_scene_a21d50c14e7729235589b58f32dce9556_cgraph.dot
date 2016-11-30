@@ -1,0 +1,20 @@
+digraph "XMLParser4Scene::WhenEndElement"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="XMLParser4Scene::WhenEnd\lElement",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="Cuboid::SetCenter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_cuboid.html#a057fd804be6a022ec22411eb5b9a3073",tooltip="Zapisuje środek prostopadłościanu. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Wektor3D::x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_wektor3_d.html#ad0c31a932da0869dd3ef99ed6e8025c1",tooltip="Udostępia do odczytu współrzędną x-ową. "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="Wektor3D::y",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_wektor3_d.html#a470e6aadf3fca3101398c9326f20bfa6",tooltip="Udostępia do odczytu współrzędną y-ową. "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="Wektor3D::z",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_wektor3_d.html#a79389ab1455820e0ad030350668d91d7",tooltip="Udostępia do odczytu współrzędną z-ową. "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="Cuboid::SetSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_cuboid.html#ad4ab95061ca2e19aa7e2c890eb345e22",tooltip="Zapisuje dlugości boków prostopadłościanu. "];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

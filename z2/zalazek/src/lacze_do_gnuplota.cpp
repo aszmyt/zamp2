@@ -77,6 +77,7 @@ namespace PzG {
    UstawZakresY(-350,350);
    UstawZakresZ(-200,200);
    UstawRotacjeXZ(60,30);
+   UstawRotacjeXZ(-1000,30);
    UstawSkaleXZ(1,1);
  }
 
@@ -97,7 +98,8 @@ namespace PzG {
 
  bool LaczeDoGNUPlota::DodajNazwePliku( const char      * NazwaPliku,
                                         RodzajRysowania   RodzRys,
-                                        int               Szerokosc
+                                        int               Szerokosc,
+                                        int               StylLinii
                                       )
  {
   bool rezultat = true;
@@ -108,7 +110,7 @@ namespace PzG {
     rezultat = false;
   }
 
-  _InfoPlikow.push_back(InfoPlikuDoRysowania(NazwaPliku,RodzRys,Szerokosc));
+  _InfoPlikow.push_back(InfoPlikuDoRysowania(NazwaPliku,RodzRys,Szerokosc,StylLinii));
   return rezultat;
  }
 
@@ -266,7 +268,7 @@ namespace PzG {
  *  współrzędne wierzchołków zawarte są w plikach.
  *  Nazwy tych plików muszą być wcześniej dołączone do kolejki 
  *  plików poprzez zastosowanie polecenia
- *   \link LaczeDoGNUPlota::DodajNazwe DodajNazwe\endlink.
+ *   \link LaczeDoGNUPlota::DodajNazwePliku DodajNazwePliku\endlink.
  *  
  * \param Polecenie - dopisywana jest do niego sekwencja znaków
  *                  tworzących parametry dla polecenia \e plot.
@@ -296,6 +298,8 @@ namespace PzG {
        (Nazwy->WezRodzRys() == RR_Ciagly ? " w l" : " w p pt 5");
        if  (Nazwy->WezRodzRys() == RR_Ciagly) OSStrm << " lw " << Nazwy->WezSzerokosc();
                                          else OSStrm << " ps " << Nazwy->WezSzerokosc();
+       if (Nazwy->WezStylLinii() != -1)
+                           OSStrm << " lt " << Nazwy->WezStylLinii();
        Polecenie += OSStrm.str();
        *Sep = ", ";
   }
@@ -417,6 +421,8 @@ std::string LaczeDoGNUPlota::ZapiszUstawienieZakresu(char Os) const
 std::string LaczeDoGNUPlota::ZapiszUstawienieRotacjiISkali() const
 {
   ostringstream strm;
+
+  if (RotacjaX() == -1000) return "";
   strm << "set view " << RotacjaX() << "," << RotacjaZ() 
        << "," << SkalaX() << "," << SkalaZ() << endl;
   return strm.str();

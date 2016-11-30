@@ -1,0 +1,11 @@
+digraph "Cuboid::SetCenter"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Cuboid::SetCenter",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Scene::AddObstacle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_scene.html#aa673e67c91dff47b5ab1550de35bfa19",tooltip="Dodaje nową przeszkodę do sceny. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="XMLParser4Scene::WhenEnd\lElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_x_m_l_parser4_scene.html#a21d50c14e7729235589b58f32dce9556",tooltip="Wykonuje końcowe operacje związane z danym elementem XML. "];
+}

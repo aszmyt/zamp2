@@ -54,18 +54,34 @@ const char* Interp4Rotate::GetCmdName() const
 /*!
  *
  */
-bool Interp4Rotate::ExecCmd( DronPose     *pRobPose,  Visualization *pVis) const
+bool Interp4Rotate::ExecCmd( DronPose     *pRobPose,  Visualization *pVis,Scene *scn) const
 {
-double d,pom;
-d=pRobPose->GetAngle_deg(d);
-	pRobPose->SetAngle_deg(_Angle_rotation);
-	pom=_Angle_rotation/_Angular_velocity;
-	usleep(pom*100000);
+  if(_Angular_velocity == 0)
+    return true;
+  
+  Wektor3D wsp;
+  double kat,czas;
+  kat=pRobPose->GetAngle_deg();
+  czas=abs(_Angle_rotation/_Angular_velocity);
 
 
-  /*
-   *  Tu trzeba napisać odpowiedni kod.
-   */
+ 
+  if(_Angular_velocity<0&&_Angle_rotation<0)
+    kat=kat-_Angle_rotation;
+  else if(_Angular_velocity<0&&_Angle_rotation>=0)
+    kat=kat-_Angle_rotation;
+  else
+    kat=kat+_Angle_rotation;
+
+  
+
+  pRobPose->SetAngle_deg(kat);
+
+
+
+  usleep(czas*100000);
+  pVis->Draw(pRobPose);  
+
   return true;
 }
 
@@ -75,12 +91,10 @@ d=pRobPose->GetAngle_deg(d);
  */
 bool Interp4Rotate::ReadParams(std::istream& Strm_CmdsList)
 {
-
-Strm_CmdsList>>_Angular_velocity>>_Angle_rotation;
   /*
    *  Tu trzeba napisać odpowiedni kod.
    */
-  return true;
+  return (Strm_CmdsList>>_Angular_velocity>>_Angle_rotation);
 }
 
 

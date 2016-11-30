@@ -1,9 +1,21 @@
+#include <xercesc/sax2/SAX2XMLReader.hpp>
+#include <xercesc/sax2/XMLReaderFactory.hpp>
+#include <xercesc/sax2/DefaultHandler.hpp>
+#include <xercesc/util/XMLString.hpp>
 #include "GnuplotVisualizer.hh"
 #include <fstream>
 #include <iostream>
+#include <cmath>
 #include "Wektor3D.hh"
 
 using namespace std;
+using namespace xercesc;
+
+#define FILE_NAME__ROTOR_TEMPLATE "wzor_rotora.dat"
+#define FILE_NAME__ROTOR1          "rotor1.dat"
+#define FILE_NAME__ROTOR2          "rotor2.dat"
+#define FILE_NAME__ROTOR3          "rotor3.dat"
+#define FILE_NAME__ROTOR4          "rotor4.dat"
 
 /*!
  * Konstruktor inicjalizuje pracę z programem gnuplot.
@@ -38,26 +50,61 @@ GnuplotVisualizer::GnuplotVisualizer()
   Strm.open(FILE_NAME__DRON_BODY_VIEW);  Strm.close();  // zawartość
 
   Plotter.Inicjalizuj(); 
-  Plotter.DodajNazwePliku(FILE_NAME__TRAJECTORY);
-  Plotter.DodajNazwePliku(FILE_NAME__DRON_BODY_VIEW);
+
+  AddDronFileNames4Gnuplot();
 
   Plotter.ZmienTrybRys(PzG::TR_3D);
   Plotter.UstawZakresX(-100, 250);
   Plotter.UstawZakresY(-100, 250);
   Plotter.UstawZakresZ(-100, 200);
-  Plotter.UstawRotacjeXZ(40,60); 
+  //
+  // Lepiej nie wymuszać ustawienia widoku. To pozwoli zmieniać widok za pomocą
+  // myszki w trakcie wykonywania rysowania.
+  //
+  //  Plotter.UstawRotacjeXZ(40,60);
+  
+  Scn = new Scene;
 }
 
+GnuplotVisualizer::~GnuplotVisualizer(){
+  Scn->RemoveAllObstacles();
+  delete Scn;
+
+}
+/*
+ * Moduł LaczeDoGnuplota posiada listę plików, z których gnuplot będzie brał
+ * dane od rysowania brył.
+ * Niniejsza metoda dodaje do tej listy nazwy plików, w których będzie obrysł
+ * brył reprezentujących poszczególne elementy drona.
+ *
+ * Metodę tę można rozbudować wg własnych potrzeb.
+ */
+void GnuplotVisualizer::AddDronFileNames4Gnuplot()
+{
+    // Parametr 1 na końcu odpowiada rysowaniu kolorem czerwonym
+  Plotter.DodajNazwePliku(FILE_NAME__TRAJECTORY,PzG::RR_Ciagly,2,1);
+
+    // Parametr 1 na końcu odpowiada rysowaniu kolorem czarnym
+  Plotter.DodajNazwePliku(FILE_NAME__DRON_BODY_VIEW,PzG::RR_Ciagly,1,7);
+  Plotter.DodajNazwePliku(FILE_NAME__ROTOR1,PzG::RR_Ciagly,1,7);
+  Plotter.DodajNazwePliku(FILE_NAME__ROTOR2,PzG::RR_Ciagly,1,7);
+  Plotter.DodajNazwePliku(FILE_NAME__ROTOR3,PzG::RR_Ciagly,1,7);
+  Plotter.DodajNazwePliku(FILE_NAME__ROTOR4,PzG::RR_Ciagly,1,7);
+}
+
+
 /*!
+ * \brief Dodaje punkt do ścieżki ruchu
+ *
  * Dodaje do pliku, którego nazwa jest zdefinowana
  * przez stałą 
  * \link Visualization.hh::FILE_NAME__DRON_BODY_VIEW
- *                                     FILE_NAME__DRON_BODY_VIEW\endlik,
+ *                                     FILE_NAME__DRON_BODY_VIEW\endlink,
  * współrzędne następnego punktu ścieżki ruchu drona.
  */
 bool AddTrajectoryPoint( const DronPose *pPose )
 {
-  ofstream  OuStrm(FILE_NAME__TRAJECTORY,ios::app);
+  ofstream  OuStrm(FILE_NAME__TRAJECTORY,ios::app); // Plik otwarty w trybie dopisywania
   if (!OuStrm.is_open()) {
     cerr << " Blad otwarcia do zapisu pliku \"" FILE_NAME__TRAJECTORY "\""
 	 << endl;
@@ -66,6 +113,97 @@ bool AddTrajectoryPoint( const DronPose *pPose )
   OuStrm << pPose->GetPos_m() << endl;
   return true;
 }
+
+
+/*!
+ * \brief Rotacja i skalowanie współrzędnych punktu
+ *
+ * Dokonuje rotacji i skalowania współrzędnych zadanego punktu.
+ * \param[in] sn - sinus kąta rotacji,
+ * \param[in] cn - cosinus kąta rotacji,
+ * \param[in] rPnt   - współrzędne punktu, które mają być podane rotacji i skalowaniu,
+ * \param[in] rScale - współczynniki skali wzdłuż każdej z osi.
+ * \return Zwaraca przetransformowane współrzędne punktu.
+ */
+Wektor3D RotateXY( double sn, double cn, const Wektor3D & rPnt, const Wektor3D & rScale)
+{
+  return Wektor3D( rScale.x()*(rPnt.x()*cn - rPnt.y()*sn), 
+                   rScale.y()*(rPnt.x()*sn + rPnt.y()*cn), 
+                   rScale.z()*rPnt.z()
+                  );
+}
+
+/*
+ * Czyta plik, który zawiera współrzędne bryły wzorocej. Przeczytane współrzędne
+ * wierzchołków są transformowane, tzn. podane są:
+ *   \li rotacji,
+ *   \li skalowaniu,
+ *   \li translacji.
+ * Następnie zapisywane są do pliku, który będzie czytał gnuplot. Ważne jest,
+ * że funkcja ta zachowuje budowę pliku wzorcowego, tzn. w odpowiednim miejscu
+ * znajdzie się wolna linia między poszczególnymi zestawami współrzędnych
+ * wierzchołków.
+ *  
+ * \param[in] sFile_Template - nazwa pliku zawierającego współrzędne wierzchołków bryły
+ *                             wzorcowej. Z tego pliku wspomniane współrzędne są czytane.
+ * \param[in] sFile_Target - nazwa pliku, do którego zostaną zapisane przetransformowane
+ *                           współrzędne.
+ * \param[in] rTrans_m     - wektor translacji, którego współrzędne wyrażone są w metrach.
+ * \param[in] RotAngle_rad - kąt rotacji wyrażony w radianach.
+ *
+ * \retval true - gdy operacja otwarcia i zapisu odpowiednich plików zakończyła się
+ *                powodzeniem,
+ * \retval false - w przypadku przeciwnym.
+ */
+bool TransformGeom(
+		   const char      *sFile_Template,
+		   const char      *sFile_Target,
+                   const Wektor3D  &rTrans_m,
+                   double            RotAngle_rad,
+                   const Wektor3D  &rScale
+    	          )
+{
+  ofstream  OuStrm(sFile_Target);
+  ifstream  InStrm(sFile_Template);
+  Wektor3D  Pos;
+
+  if (!OuStrm.is_open()) {
+    cerr << " Blad otwarcia do zapisu pliku \"" << sFile_Target << "\""
+	 << endl;
+    return false;
+  }
+  if (!InStrm.is_open()) {
+    cerr << " Blad otwarcia do odczytu pliku \"" << sFile_Template << "\""
+	 << endl;
+    return false;
+  }
+
+  char      Separator;
+  double    sn = sin(RotAngle_rad),  cn = cos(RotAngle_rad);
+ 
+  while (!InStrm.eof()) {
+    if (InStrm >> Pos) {
+        // Najpierw dokonujemy rotacji
+      Pos = RotateXY(sn,cn,Pos,rScale);
+        // Następnie translacja
+      Pos += rTrans_m;
+      OuStrm << Pos << endl;
+      continue;
+    }
+    InStrm.clear();
+    if (!(InStrm >> Separator)) break;
+    if (Separator != '#') {
+      cerr << " Blad w pliku \"" << sFile_Target <<  "\"" << endl
+           << " oczekiwano znaku #. Zamiast tego odebrano znak " << Separator
+	   << endl;
+      return false;
+    }
+    OuStrm << "#\n\n";
+  }
+  return true;
+}
+
+
 
 
 /*!
@@ -86,46 +224,52 @@ bool AddTrajectoryPoint( const DronPose *pPose )
  */
 bool WriteCurrDonPose( const DronPose *pPose )
 {
-  ofstream  OuStrm(FILE_NAME__DRON_BODY_VIEW);
-  ifstream  InStrm(FILE_NAME__DRON_BODY_TEMPLATE);
-  Wektor3D  Pos;
+  double DronAngle_rad;
+  static double RotorAngle_rad = 0;
+  Wektor3D      RotorScale(18,18,10);
+  Wektor3D      DronScale(20,20,10);
 
-  if (!OuStrm.is_open()) {
-    cerr << " Blad otwarcia do zapisu pliku \"" FILE_NAME__DRON_BODY_VIEW "\""
-	 << endl;
-    return false;
-  }
-  if (!InStrm.is_open()) {
-    cerr << " Blad otwarcia do odczytu pliku \"" FILE_NAME__DRON_BODY_TEMPLATE "\""
-	 << endl;
-    return false;
-  }
+  DronAngle_rad=pPose->GetAngle_deg()*M_PI/180;
+   //
+   // Wektory translacji rotorów względem korpusu drona
+   //
+  Wektor3D      Trans_Rot1(DronScale.x(),DronScale.y(),DronScale.z());
+  Wektor3D      Trans_Rot2(-DronScale.x(),DronScale.y(),DronScale.z());
+  Wektor3D      Trans_Rot3(DronScale.x(),-DronScale.y(),DronScale.z());
+  Wektor3D      Trans_Rot4(-DronScale.x(),-DronScale.y(),DronScale.z());
 
-  char      Separator;
- 
-  while (!InStrm.eof()) {
-    if (InStrm >> Pos) {
-      // 
-      // Przed translacją trzeba dokonać właściwej rotacji, aby uwzględnić aktualną
-      // orientację drona. Dla ułatwienia przyjmujemy, że uwzględniamy tylko orientację
-      // w płaszczyźnie 0XY.
-      // 
-      // Tutaj więc należy dopisać kod rotacji
-      //
-      Pos += pPose->GetPos_m();
-      OuStrm << Pos << endl;
-      continue;
-    }
-    InStrm.clear();
-    if (!(InStrm >> Separator)) break;
-    if (Separator != '#') {
-      cerr << " Blad w pliku \"" FILE_NAME__DRON_BODY_TEMPLATE "\"" << endl
-           << " oczekiwano znaku #. Zamiast tego odebrano znak " << Separator
-	   << endl;
-      return false;
-    }
-    OuStrm << "#\n\n";
-  }
+  RotorAngle_rad += 5*M_PI/180;
+
+  if (!TransformGeom(FILE_NAME__DRON_BODY_TEMPLATE,FILE_NAME__DRON_BODY_VIEW,
+                     pPose->GetPos_m(), DronAngle_rad , DronScale)) return false;
+
+
+   //
+   // Rotory po przekątnej tworzą pary. Rotory z tej samej pary obracają się w tę 
+   // samą stronę. Jednakże każda z par rotorów musi obracać w kierunku przeciwnym
+   // do tego, w jakim obracają się rotory z drugiej pary.
+   //
+   //  Pierwsza para rotorów
+   //
+  if (!TransformGeom(FILE_NAME__ROTOR_TEMPLATE, FILE_NAME__ROTOR1,
+                     pPose->GetPos_m()+Trans_Rot1, 
+                     -RotorAngle_rad + DronAngle_rad, RotorScale)) return false;
+
+  if (!TransformGeom(FILE_NAME__ROTOR_TEMPLATE,FILE_NAME__ROTOR4,
+                     pPose->GetPos_m()+Trans_Rot4, 
+                     -RotorAngle_rad + DronAngle_rad, RotorScale)) return false;
+
+
+   //
+   //  Druga para rotorów
+   //
+  if (!TransformGeom(FILE_NAME__ROTOR_TEMPLATE,FILE_NAME__ROTOR2,
+                     pPose->GetPos_m()+Trans_Rot2, 
+                     RotorAngle_rad + DronAngle_rad, RotorScale)) return false;
+
+  if (!TransformGeom(FILE_NAME__ROTOR_TEMPLATE,FILE_NAME__ROTOR3,
+                     pPose->GetPos_m()+Trans_Rot3, 
+                     RotorAngle_rad + DronAngle_rad, RotorScale)) return false;
   return true;
 }
 
@@ -150,3 +294,133 @@ void GnuplotVisualizer::Draw( const DronPose *pPose )
   WriteCurrDonPose(pPose);
   Plotter.Rysuj();
 }
+
+
+
+/*!
+ *  Metoda ma czytać opis sceny z pliku XML, który zawiera informację
+ *  o rozmieszczeniu przeszkód. Każda z przeszkód reprezentowana jest
+ *  poprzez prostopadłościan. Dla ułatwienia przyjmujemy, że 
+ *  ścianki prostopadłościanów są albo prostopadle, albo też równoległe
+ *  do płaszczyzn OXY, OXZ oraz OYZ.
+ *
+ *
+ *  W tej chwili metoda ta jedynie symuluje czytanie z pliku.
+ *  Wstawia przeszkody na sztywno.
+ *
+ *  \param[in] FileName_XML - nazwa pliku w formacie XML, w którym zawarty
+ *                            jest opis rozmieszczenia przeszkód na scenie.
+ *
+ *  \retval true - gdy operacja zakończyła się powodzeniem,
+ *  \retval false - w przypadku przeciwnym.
+ *
+ *  \post  Jeżeli operacja zakończyła się powodzeniem, to zostają usunięte
+ *         stare przeszkody, zaś na ich miejsce wstawiane są nowe.
+ */
+bool GnuplotVisualizer::ReadScene(const char* FileName_XML)
+{
+  //sprawdzamy czy plik istnieje
+  ifstream plik;
+  plik.open(FileName_XML,ios::in);
+  if(plik.fail()){
+    cerr<<"Nie mozna otworzyc pliku "<<FileName_XML<<endl;
+    return false;
+  }
+  plik.close();
+
+   // 2. Usuwamy dotychczasowe obiekty
+  Scn->RemoveAllObstacles();
+
+   // 3. Następnie usuwamy wszystkie nazwy plików związne ze starymi
+   //    obiektami.
+  Plotter. UsunWszystkieNazwyPlikow();
+
+   // 4. Pozostawiamy nazwy plików, które wiążą się z elementami konstrukcji drona
+  AddDronFileNames4Gnuplot();
+
+     try {
+            XMLPlatformUtils::Initialize();
+   }
+   catch (const XMLException& toCatch) {
+            char* message = XMLString::transcode(toCatch.getMessage());
+            cerr << "Error during initialization! :\n";
+            cerr << "Exception message is: \n"
+                 << message << "\n";
+            XMLString::release(&message);
+            return 1;
+   }
+
+   SAX2XMLReader* pParser = XMLReaderFactory::createXMLReader();
+
+   pParser->setFeature(XMLUni::fgSAX2CoreNameSpaces, true);
+   pParser->setFeature(XMLUni::fgSAX2CoreValidation, true);
+   pParser->setFeature(XMLUni::fgXercesDynamic, false);
+   pParser->setFeature(XMLUni::fgXercesSchema, true);
+   pParser->setFeature(XMLUni::fgXercesSchemaFullChecking, true);
+
+   pParser->setFeature(XMLUni::fgXercesValidationErrorAsFatal, true);
+   
+   DefaultHandler* pHandler = new XMLParser4Scene(Scn);
+   
+   pParser->setContentHandler(pHandler);
+   pParser->setErrorHandler(pHandler);
+
+   try {
+     
+     if (!pParser->loadGrammar("grammar/scene.xsd",
+                              xercesc::Grammar::SchemaGrammarType,true)) {
+       cerr << "!!! Plik grammar/scene.xsd, '" << endl
+            << "!!! ktory zawiera opis gramatyki, nie moze zostac wczytany."
+            << endl;
+       return false;
+     }
+     pParser->setFeature(XMLUni::fgXercesUseCachedGrammarInParse,true);
+     pParser->parse(FileName_XML);
+   }
+   catch (const XMLException& Exception) {
+            char* sMessage = XMLString::transcode(Exception.getMessage());
+            cerr << "Informacja o wyjatku: \n"
+                 << "   " << sMessage << "\n";
+            XMLString::release(&sMessage);
+            return false;
+   }
+   catch (const SAXParseException& Exception) {
+            char* sMessage = XMLString::transcode(Exception.getMessage());
+            char* sSystemId = xercesc::XMLString::transcode(Exception.getSystemId());
+
+            cerr << "Blad! " << endl
+                 << "    Plik:  " << sSystemId << endl
+                 << "   Linia: " << Exception.getLineNumber() << endl
+                 << " Kolumna: " << Exception.getColumnNumber() << endl
+                 << " Informacja: " << sMessage 
+                 << endl;
+
+            XMLString::release(&sMessage);
+            XMLString::release(&sSystemId);
+            return false;
+   }
+   catch (...) {
+            cout << "Zgloszony zostal nieoczekiwany wyjatek!\n" ;
+            return false;
+   }
+    Wektor3D size,center;
+    for(int i=0;i<(Scn->SizeOfScene());i++){
+      Scn->GetParameters(center,size,i);
+    
+      if (!TransformGeom(FILE_NAME__DRON_BODY_TEMPLATE,("przeszkoda"+to_string(i)+".dat").c_str(),
+			 center, 0, size)) return false;
+      Plotter.DodajNazwePliku(("przeszkoda"+to_string(i)+".dat").c_str(),PzG::RR_Ciagly,1,12);
+
+    }
+cout<<"tekst";
+   
+  delete pParser;
+  delete pHandler;
+  return true;
+
+}
+
+Scene * GnuplotVisualizer::Wskaznik(void){
+return(Scn);
+}
+

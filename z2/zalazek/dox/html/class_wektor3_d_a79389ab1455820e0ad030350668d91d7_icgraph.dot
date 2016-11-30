@@ -1,0 +1,46 @@
+digraph "Wektor3D::z"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Wektor3D::z",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Cuboid::SetSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_cuboid.html#ad4ab95061ca2e19aa7e2c890eb345e22",tooltip="Zapisuje dlugości boków prostopadłościanu. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Scene::AddObstacle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_scene.html#aa673e67c91dff47b5ab1550de35bfa19",tooltip="Dodaje nową przeszkodę do sceny. "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="XMLParser4Scene::WhenEnd\lElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_x_m_l_parser4_scene.html#a21d50c14e7729235589b58f32dce9556",tooltip="Wykonuje końcowe operacje związane z danym elementem XML. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Cuboid::SetCenter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_cuboid.html#a057fd804be6a022ec22411eb5b9a3073",tooltip="Zapisuje środek prostopadłościanu. "];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="DronPose::SetPos_m",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dron_pose.html#aeefe822241c1c8dbcab3e806dd1016bf",tooltip="Ustawia wartości współrzędnych pozy robota. "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Interp4Fly::ExecCmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_interp4_fly.html#a0e0e5348c18740d2647a1c02aad4344c",tooltip="Wykonuje zadanie dla danej wtyczki i wyświetla pozycję drona. "];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Interp4Turn::ExecCmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_interp4_turn.html#aa6b8457105e0d372ecfb5bdfec0d7efa",tooltip="Wykonuje zadanie dla danej wtyczki i wyświetla pozycję drona. "];
+  Node6 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="RotateXY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_gnuplot_visualizer_8cpp.html#a359580f84d2edd509de42303e4759bc2",tooltip="Rotacja i skalowanie współrzędnych punktu. "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="TransformGeom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_gnuplot_visualizer_8cpp.html#a859ec2a0d8df8dcd2986cafdf41929a6"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="WriteCurrDonPose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_gnuplot_visualizer_8cpp.html#a9f7a66ce1ada8bb52c97bc5fb9110f61"];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="GnuplotVisualizer::Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gnuplot_visualizer.html#a2838d8dfb9a8e5f1c383f59f2dd2d9a1"];
+  Node13 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="GnuplotVisualizer::\lReadScene",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gnuplot_visualizer.html#ad50187da03a2c0687249e770eb3e1c82",tooltip="Metoda czytania opis sceny z pliku XML. "];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="operator\>\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wektor3_d_8cpp.html#a382fbd2d002e9cb6d8d58cb2f3cf786e",tooltip="Czyta ze strumienia trzy kolejne współrzędne wektora. "];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="Wektor3D::z",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_wektor3_d.html#aa6cbb7a13c8975b47f41794c99d77093",tooltip="Udostępia do modyfikacji współrzędną z-ową. "];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="operator\<\<",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_wektor3_d_8cpp.html#addd0e894a30b8fc8f3e9ef588b037767",tooltip="Wpisuje do strumienia trzy kolejne współrzędne rozdzielone pojedynczymi spacjami. ..."];
+  Node17 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

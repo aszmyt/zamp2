@@ -71,15 +71,25 @@ namespace PzG {
     public:
      /*!
       * Inicjalizuje obiekt.
-      *  \param NazwaPliku - nazwa pliku, z którego pobierane będą dane,
-      *  \param RodzRys - rodzaj rysowania linii,
-      *  \param Szerokosc - szerokosc linii.
+      *  \param[in] NazwaPliku - nazwa pliku, z którego pobierane będą dane,
+      *  \param[in] RodzRys - rodzaj rysowania linii,
+      *  \param[in] Szerokosc - szerokosc linii.
+      *  \param[in] StylLinii - definiuje styl linii. Jeśli wykres jest rysowany na ekranie,
+      *                         to wybór stylu równoznaczny jest wyborowi koloru linii.
+      *                         Aby zobaczyć wszystkie dostępne style, należy wyołać
+      *                         polecenie \p gnuplot, a później na poziomie pracy tego programu
+      *                         wykonać polecenie \p test.
       */
-      InfoPlikuDoRysowania(const char* NazwaPliku, RodzajRysowania  RodzRys, int Szerokosc)
+      InfoPlikuDoRysowania(const char*      NazwaPliku, 
+                           RodzajRysowania  RodzRys, 
+                           int              Szerokosc,
+                           int              StylLinii
+                          )
       {
         _NazwaPliku = NazwaPliku;
         _RodzRys = RodzRys;
         _Szerokosc = Szerokosc;
+        _StylLinii = StylLinii;
       }
      /*!
       * \brief Udostępia nazwę pliku do rysowania
@@ -105,7 +115,10 @@ namespace PzG {
       *  Udostępnia informację o szerokości rysowanej linii.
       */
       int WezSzerokosc() const { return _Szerokosc; }
-
+     /*!
+      * \brief Udostępnia styl linii
+      */
+      int WezStylLinii() const { return _StylLinii; }
     private:
     /*!
      * \brief Nazwa pliku z danymi do rysowania
@@ -126,6 +139,13 @@ namespace PzG {
      * Przechowuje informacje o sposobie rysowania linii.
      */
       RodzajRysowania  _RodzRys;
+    /*!
+     * \brief Decyduje o stylu linii. 
+     *
+     *  Decyduje o stylu linii, co w przypadku rysownia na ekranie monitora
+     *  oznacza wybór koloru wg tabeli gnuplota (generuje ją za pomocą polecenia test)
+     */
+     int  _StylLinii;
   };
 
 
@@ -155,7 +175,7 @@ class LaczeDoGNUPlota {
     */
   int           _Wejscie_GNUPlota;
    /*!
-    *  Pole przechowuje deskryptor do weyjścia standardowego uruchomionego
+    *  Pole przechowuje deskryptor do wyjścia standardowego uruchomionego
     *  programu gnuplot.
     */
   int           _Wyjscie_GNUPlota;
@@ -269,7 +289,8 @@ class LaczeDoGNUPlota {
    *              są generowane jako pierwsze, to zmienna ta musi 
    *              być wskaźnikiem do wskaźnika na łańcuch: " ".
    */
-  virtual bool DopiszPlikiDoPoleceniaRysowania( std::string &Polecenie, char const **Sep );
+  virtual bool DopiszPlikiDoPoleceniaRysowania( std::string &Polecenie, char const **Sep )
+                                                                           { return true; }
 
   /*!
    *  \brief Tworzy polecenie ustawiające zakres dla danej współrzędnej.
@@ -567,6 +588,13 @@ class LaczeDoGNUPlota {
     *                   dwa rodzaje, a mianowicie: ciągły i punktowy.
     * \param  Szerokosc - określa szerokość rysowanej linii. Jest ona
     *                     podana w pikselach.
+    *  \param[in] StylLinii - definiuje styl linii. Jeśli wykres jest rysowany na ekranie,
+    *                         to wybór stylu równoznaczny jest wyborowi koloru linii.
+    *                         Aby zobaczyć wszystkie dostępne style, należy wyołać
+    *                         polecenie \p gnuplot, a później na poziomie pracy tego programu
+    *                         wykonać polecenie \p test. Domyślna wartość -1 powoduje, że
+    *                         to \p gnuplot będzie wybierał automatycznie nowy styl linii, tak
+    *                         aby można było odróżnić rysunki różnych linii i siatek powierzchni.
     *
     * \retval true - jeżeli istnieje plik o nazwie udostępnionej poprzez
     *            parametr
@@ -580,7 +608,8 @@ class LaczeDoGNUPlota {
     */
    bool DodajNazwePliku( const char       * NazwaPliku, 
                          RodzajRysowania    RodzRys = RR_Ciagly, 
-                         int                Szerokosc = 1
+                         int                Szerokosc = 1,
+                         int                StylLinii = -1
                        );
 
     /*!
@@ -668,16 +697,8 @@ class LaczeDoGNUPlota {
 
   LaczeDoGNUPlota();
   virtual ~LaczeDoGNUPlota();
-};
+ };
 
-  inline
-  bool LaczeDoGNUPlota::DopiszPlikiDoPoleceniaRysowania( std::string &,
-                                                         char const  **
-                                                       )
-  { return true; }
-
-
-
-}
+} // namespace PzG
 
 #endif

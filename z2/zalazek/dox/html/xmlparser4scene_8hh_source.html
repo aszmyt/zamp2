@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>parserXML: Plik źródłowy xmlparser4scene.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">parserXML
+   </div>
+   <div id="projectbrief">2000</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.11 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('xmlparser4scene_8hh_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">xmlparser4scene.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="xmlparser4scene_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef XMLPARSER4SCENE_HH</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define XMLPARSER4SCENE_HH</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;xercesc/util/XMLString.hpp&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;xercesc/util/PlatformUtils.hpp&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;xercesc/sax/Locator.hpp&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;xercesc/sax2/Attributes.hpp&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;xercesc/sax2/DefaultHandler.hpp&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//XERCES_CPP_NAMESPACE_USE</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_scene_8hh.html">Scene.hh</a>&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_x_m_l_parser4_scene.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_x_m_l_parser4_scene.html">XMLParser4Scene</a> : <span class="keyword">public</span> xercesc::DefaultHandler {</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">public</span>:</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="class_x_m_l_parser4_scene.html#adedad4f4516e578a1c304fef49f8b15d">XMLParser4Scene</a>(<a class="code" href="class_scene.html">Scene</a> *Scn);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_x_m_l_parser4_scene.html#afc4aed59fab28271d8c3e9dfcdea30fe">startDocument</a>();</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_x_m_l_parser4_scene.html#a356246f16ac2b6eff32978c8018c8a41">endDocument</a>();</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_x_m_l_parser4_scene.html#a5738022821a172caceb35dd0442f459d">startElement</a>(</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    <span class="keyword">const</span> XMLCh *<span class="keyword">const</span> pURI, </div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    <span class="keyword">const</span> XMLCh *<span class="keyword">const</span> pLocalName, </div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    <span class="keyword">const</span> XMLCh *<span class="keyword">const</span> pQNname,</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    <span class="keyword">const</span>   xercesc::Attributes&amp;     attrs</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                  );</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span>  <span class="keywordtype">void</span> <a class="code" href="class_x_m_l_parser4_scene.html#a66f2e180430f05d302430e1e587b6120">endElement</a>(</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    <span class="keyword">const</span> XMLCh *<span class="keyword">const</span> pURI, </div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    <span class="keyword">const</span> XMLCh *<span class="keyword">const</span> pLocalName, </div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    <span class="keyword">const</span> XMLCh *<span class="keyword">const</span> pQNname</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                   );</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_x_m_l_parser4_scene.html#a466f7802dbca5983cc9785de42f18e7d">fatalError</a>(<span class="keyword">const</span> xercesc::SAXParseException&amp;);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_x_m_l_parser4_scene.html#aa2fda0abac07da037aaacd0449f6b038">error</a>(<span class="keyword">const</span> xercesc::SAXParseException &amp;exc);</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_x_m_l_parser4_scene.html#a59e08250a5eca7d7bf6e1f2026e54867">warning</a>(<span class="keyword">const</span> xercesc::SAXParseException &amp;exc);</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_x_m_l_parser4_scene.html#a21d50c14e7729235589b58f32dce9556">WhenEndElement</a>(<span class="keyword">const</span> std::string&amp; ElemName);</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_x_m_l_parser4_scene.html#a41eceec63d3886d280d9ec71f956b5f6">WhenStartElement</a>( <span class="keyword">const</span> std::string&amp;             ElemName,</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                   <span class="keyword">const</span> xercesc::Attributes&amp;     Attrs</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                         );</div><div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_x_m_l_parser4_scene.html#a03397e722ed232fb00670496fc252fef">   88</a></span>&#160;  <a class="code" href="class_wektor3_d.html">Wektor3D</a> <a class="code" href="class_x_m_l_parser4_scene.html#a03397e722ed232fb00670496fc252fef">center</a>;</div><div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_x_m_l_parser4_scene.html#ad97e8649b347bad8481f6fbf7e8b9543">   94</a></span>&#160;  <a class="code" href="class_wektor3_d.html">Wektor3D</a> <a class="code" href="class_x_m_l_parser4_scene.html#ad97e8649b347bad8481f6fbf7e8b9543">size</a>;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">private</span>:</div><div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_x_m_l_parser4_scene.html#a4dd3131df1b76489fba50bd65a5a3df6">  102</a></span>&#160;   <a class="code" href="class_scene.html">Scene</a>  *<a class="code" href="class_x_m_l_parser4_scene.html#a4dd3131df1b76489fba50bd65a5a3df6">_pScn</a>;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;};</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_x_m_l_parser4_scene_html_a66f2e180430f05d302430e1e587b6120"><div class="ttname"><a href="class_x_m_l_parser4_scene.html#a66f2e180430f05d302430e1e587b6120">XMLParser4Scene::endElement</a></div><div class="ttdeci">virtual void endElement(const XMLCh *const pURI, const XMLCh *const pLocalName, const XMLCh *const pQNname)</div><div class="ttdoc">Wywoływana jest po dojściu do końca elementu XML. </div><div class="ttdef"><b>Definition:</b> <a href="xmlparser4scene_8cpp_source.html#l00137">xmlparser4scene.cpp:137</a></div></div>
+<div class="ttc" id="class_x_m_l_parser4_scene_html_afc4aed59fab28271d8c3e9dfcdea30fe"><div class="ttname"><a href="class_x_m_l_parser4_scene.html#afc4aed59fab28271d8c3e9dfcdea30fe">XMLParser4Scene::startDocument</a></div><div class="ttdeci">virtual void startDocument()</div><div class="ttdoc">Wywoływana jest na początku dokumentu. </div><div class="ttdef"><b>Definition:</b> <a href="xmlparser4scene_8cpp_source.html#l00030">xmlparser4scene.cpp:30</a></div></div>
+<div class="ttc" id="_scene_8hh_html"><div class="ttname"><a href="_scene_8hh.html">Scene.hh</a></div><div class="ttdoc">Definicja klasy Scena. </div></div>
+<div class="ttc" id="class_x_m_l_parser4_scene_html_adedad4f4516e578a1c304fef49f8b15d"><div class="ttname"><a href="class_x_m_l_parser4_scene.html#adedad4f4516e578a1c304fef49f8b15d">XMLParser4Scene::XMLParser4Scene</a></div><div class="ttdeci">XMLParser4Scene(Scene *Scn)</div><div class="ttdoc">Inicjalizuje obiekt i kojarzy go ze sceną </div><div class="ttdef"><b>Definition:</b> <a href="xmlparser4scene_8cpp_source.html#l00020">xmlparser4scene.cpp:20</a></div></div>
+<div class="ttc" id="class_x_m_l_parser4_scene_html"><div class="ttname"><a href="class_x_m_l_parser4_scene.html">XMLParser4Scene</a></div><div class="ttdoc">Implementuje reakcje na napotkane elementu opisu akcji. </div><div class="ttdef"><b>Definition:</b> <a href="xmlparser4scene_8hh_source.html#l00022">xmlparser4scene.hh:22</a></div></div>
+<div class="ttc" id="class_x_m_l_parser4_scene_html_a356246f16ac2b6eff32978c8018c8a41"><div class="ttname"><a href="class_x_m_l_parser4_scene.html#a356246f16ac2b6eff32978c8018c8a41">XMLParser4Scene::endDocument</a></div><div class="ttdeci">virtual void endDocument()</div><div class="ttdoc">Wywoływana jest na końcu dokumentu. </div><div class="ttdef"><b>Definition:</b> <a href="xmlparser4scene_8cpp_source.html#l00040">xmlparser4scene.cpp:40</a></div></div>
+<div class="ttc" id="class_x_m_l_parser4_scene_html_a466f7802dbca5983cc9785de42f18e7d"><div class="ttname"><a href="class_x_m_l_parser4_scene.html#a466f7802dbca5983cc9785de42f18e7d">XMLParser4Scene::fatalError</a></div><div class="ttdeci">void fatalError(const xercesc::SAXParseException &amp;)</div><div class="ttdoc">Wywoływana jest gdy napotkany zostanie błąd fatalny. </div><div class="ttdef"><b>Definition:</b> <a href="xmlparser4scene_8cpp_source.html#l00179">xmlparser4scene.cpp:179</a></div></div>
+<div class="ttc" id="class_x_m_l_parser4_scene_html_a21d50c14e7729235589b58f32dce9556"><div class="ttname"><a href="class_x_m_l_parser4_scene.html#a21d50c14e7729235589b58f32dce9556">XMLParser4Scene::WhenEndElement</a></div><div class="ttdeci">void WhenEndElement(const std::string &amp;ElemName)</div><div class="ttdoc">Wykonuje końcowe operacje związane z danym elementem XML. </div><div class="ttdef"><b>Definition:</b> <a href="xmlparser4scene_8cpp_source.html#l00160">xmlparser4scene.cpp:160</a></div></div>
+<div class="ttc" id="class_x_m_l_parser4_scene_html_a5738022821a172caceb35dd0442f459d"><div class="ttname"><a href="class_x_m_l_parser4_scene.html#a5738022821a172caceb35dd0442f459d">XMLParser4Scene::startElement</a></div><div class="ttdeci">virtual void startElement(const XMLCh *const pURI, const XMLCh *const pLocalName, const XMLCh *const pQNname, const xercesc::Attributes &amp;attrs)</div><div class="ttdoc">Wywoływana jest po napotkaniu nowego elementu XML. </div><div class="ttdef"><b>Definition:</b> <a href="xmlparser4scene_8cpp_source.html#l00101">xmlparser4scene.cpp:101</a></div></div>
+<div class="ttc" id="class_x_m_l_parser4_scene_html_aa2fda0abac07da037aaacd0449f6b038"><div class="ttname"><a href="class_x_m_l_parser4_scene.html#aa2fda0abac07da037aaacd0449f6b038">XMLParser4Scene::error</a></div><div class="ttdeci">void error(const xercesc::SAXParseException &amp;exc)</div><div class="ttdoc">Wywoływana jest gdy napotkany zostanie błąd. </div><div class="ttdef"><b>Definition:</b> <a href="xmlparser4scene_8cpp_source.html#l00203">xmlparser4scene.cpp:203</a></div></div>
+<div class="ttc" id="class_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdoc">Przechowuje informację o położeniu przeszkód na scenie. </div><div class="ttdef"><b>Definition:</b> <a href="_scene_8hh_source.html#l00023">Scene.hh:23</a></div></div>
+<div class="ttc" id="class_x_m_l_parser4_scene_html_ad97e8649b347bad8481f6fbf7e8b9543"><div class="ttname"><a href="class_x_m_l_parser4_scene.html#ad97e8649b347bad8481f6fbf7e8b9543">XMLParser4Scene::size</a></div><div class="ttdeci">Wektor3D size</div><div class="ttdoc">Zmienna pomocnicza. </div><div class="ttdef"><b>Definition:</b> <a href="xmlparser4scene_8hh_source.html#l00094">xmlparser4scene.hh:94</a></div></div>
+<div class="ttc" id="class_x_m_l_parser4_scene_html_a4dd3131df1b76489fba50bd65a5a3df6"><div class="ttname"><a href="class_x_m_l_parser4_scene.html#a4dd3131df1b76489fba50bd65a5a3df6">XMLParser4Scene::_pScn</a></div><div class="ttdeci">Scene * _pScn</div><div class="ttdoc">Zawiera wskaźnik do modyfikowanej sceny. </div><div class="ttdef"><b>Definition:</b> <a href="xmlparser4scene_8hh_source.html#l00102">xmlparser4scene.hh:102</a></div></div>
+<div class="ttc" id="class_x_m_l_parser4_scene_html_a03397e722ed232fb00670496fc252fef"><div class="ttname"><a href="class_x_m_l_parser4_scene.html#a03397e722ed232fb00670496fc252fef">XMLParser4Scene::center</a></div><div class="ttdeci">Wektor3D center</div><div class="ttdoc">Zmienna pomocnicza. </div><div class="ttdef"><b>Definition:</b> <a href="xmlparser4scene_8hh_source.html#l00088">xmlparser4scene.hh:88</a></div></div>
+<div class="ttc" id="class_wektor3_d_html"><div class="ttname"><a href="class_wektor3_d.html">Wektor3D</a></div><div class="ttdoc">Wektor z przestrzeni 3D. </div><div class="ttdef"><b>Definition:</b> <a href="_wektor3_d_8hh_source.html#l00020">Wektor3D.hh:20</a></div></div>
+<div class="ttc" id="class_x_m_l_parser4_scene_html_a41eceec63d3886d280d9ec71f956b5f6"><div class="ttname"><a href="class_x_m_l_parser4_scene.html#a41eceec63d3886d280d9ec71f956b5f6">XMLParser4Scene::WhenStartElement</a></div><div class="ttdeci">void WhenStartElement(const std::string &amp;ElemName, const xercesc::Attributes &amp;Attrs)</div><div class="ttdoc">Wykonuje operacje związane z danym elementem XML. </div><div class="ttdef"><b>Definition:</b> <a href="xmlparser4scene_8cpp_source.html#l00057">xmlparser4scene.cpp:57</a></div></div>
+<div class="ttc" id="class_x_m_l_parser4_scene_html_a59e08250a5eca7d7bf6e1f2026e54867"><div class="ttname"><a href="class_x_m_l_parser4_scene.html#a59e08250a5eca7d7bf6e1f2026e54867">XMLParser4Scene::warning</a></div><div class="ttdeci">void warning(const xercesc::SAXParseException &amp;exc)</div><div class="ttdoc">Wywoływana jest gdy parser sygnalizuje ostrzeżenie. </div><div class="ttdef"><b>Definition:</b> <a href="xmlparser4scene_8cpp_source.html#l00231">xmlparser4scene.cpp:231</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="xmlparser4scene_8hh.html">xmlparser4scene.hh</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

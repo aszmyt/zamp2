@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Interp4Turn.hh"
-#include <cmath>
 
 using std::cout;
 using std::endl;
@@ -27,7 +26,7 @@ Interp4Command* CreateCmd(void)
 /*!
  *
  */
- Interp4Turn::Interp4Turn(): _ang_speed(0), ang(0), radius(0)
+ Interp4Turn::Interp4Turn(): speed(0), distance(0), radius(0)
 {}
 
 
@@ -36,10 +35,8 @@ Interp4Command* CreateCmd(void)
  */
 void Interp4Turn::PrintCmd() const
 {
-  /*
-   *  Tu trzeba napisać odpowiednio zmodyfikować kod poniżej.
-   */
-  cout << GetCmdName() << " " << _ang_speed << " " << ang << " "<< radius<<endl;
+ 
+  cout << GetCmdName() << " " << speed << " " << distance << " "<< radius<<endl;
 }
 
 
@@ -55,19 +52,39 @@ const char* Interp4Turn::GetCmdName() const
 /*!
  *
  */
-bool Interp4Turn::ExecCmd( DronPose     *pRobPose,  Visualization *pVis) const
+bool Interp4Turn::ExecCmd( DronPose     *pRobPose,  Visualization *pVis,Scene *scn) const
 {
-  double d,pom,angle;
-	angle=ang*360/(2*M_PI*radius);
-	pRobPose->SetAngle_deg(angle);
-	pom=ang/_ang_speed;
-	usleep(pom*100000);
-	d=pRobPose->GetAngle_deg(d);
-	cout<<endl<<d<<"  <-- d  "<<endl;
+  Wektor3D wsp;
+  double x,x_1,y_1,y,czas,czas_1,w;
+  wsp=pRobPose->GetPos_m();
+  
+  x=wsp.x();
+  y=wsp.y();
+  
 
-  /*
-   *  Tu trzeba napisać odpowiedni kod.
-   */
+  czas = abs(distance/speed);
+  czas_1 = abs((2*M_PI*radius-distance)/speed);
+  w = abs(speed/radius);
+
+
+   
+  if(speed>=0){
+    x_1=radius*cos(w*czas);
+    y_1=radius*sin(w*czas);
+    x+=x_1;
+    y+=y_1;
+    usleep(czas*100000);
+  }
+  else{
+    x_1=radius*cos(w*czas_1);
+    y_1=radius*sin(w*czas_1);
+    x+=x_1;
+    y+=y_1;
+    usleep(czas*100000);
+  } 
+  pRobPose->SetPos_m(x,y,wsp.z());
+  pVis->Draw(pRobPose);
+  
   return true;
 }
 
@@ -77,11 +94,7 @@ bool Interp4Turn::ExecCmd( DronPose     *pRobPose,  Visualization *pVis) const
  */
 bool Interp4Turn::ReadParams(std::istream& Strm_CmdsList)
 {
-Strm_CmdsList>>_ang_speed>>ang>>radius;
-  /*
-   *  Tu trzeba napisać odpowiedni kod.
-   */
-  return true;
+  return (Strm_CmdsList>>speed>>distance>>radius);
 }
 
 
@@ -99,5 +112,5 @@ Interp4Command* Interp4Turn::CreateCmd()
  */
 void Interp4Turn::PrintSyntax() const
 {
-  cout << "   Turn ang_speed[deg/s] ang[deg] radius[m" << endl;
+  cout << "   Turn speed[m/s] distance[m] radius[m]" << endl;
 }

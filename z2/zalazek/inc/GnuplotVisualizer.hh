@@ -33,7 +33,7 @@
  * aktualnej orientacji drona, a następnie dodać do współrzędnych
  * poszczególnych wierzchołków, współrzędne akutalne pozycji.
  */
-#define FILE_NAME__DRON_BODY_TEMPLATE "korpus_drona.dat"
+#define FILE_NAME__DRON_BODY_TEMPLATE "elementarny_szescian.dat"
 
 
 /*!
@@ -41,20 +41,56 @@
  *        ruchu drona
  */
 class GnuplotVisualizer: public Visualization {
-  public:
+private:
+  /*!
+   * \brief Scena
+   * 
+   * Scena na której wyświetlamy przeszkody oraz drona
+   */
+  Scene *Scn;
+  
+public:
+Scene * Wskaznik(void);
   /*!
    * \brief Pośredniczy w uruchomieniu i przekazywaniu poleceń
    *        do programu \p gnuplot
    */
-   PzG::LaczeDoGNUPlota   Plotter;
+  PzG::LaczeDoGNUPlota   Plotter;
   /*!
    * \brief Kasuje zawartość plików danych i dodaje je do łącza do gnuplota
    */ 
   GnuplotVisualizer();
   /*!
+   * \brief Kasuje zawartość i zwalnia pamięć Sceny
+   */
+  ~GnuplotVisualizer();
+  /*!
    *
    */
    virtual void Draw( const DronPose *pPose );
+
+
+  /*!
+   * \brief Metoda czytania opis sceny z pliku XML
+   */
+  virtual bool ReadScene(const char* FileName_XML);
+  /*!
+   * \brief Tę metodę należy reimplementować
+   *
+   * Tę metodę należy reimplementować. Kod tej metody jest tylko po to, 
+   * aby ta klasa nie była klasą abstrakcyjną.
+   */
+  virtual const Cuboid* GetObstacle(unsigned int Idx) const { return nullptr; }
+
+  //--------------------------------------------------------------
+  // W dalszej części zdefinowane są przykładowe pomocnicze metody
+  //
+
+  /*!
+   * \brief Dodaje nazwy plików opisów obiektów reprezentujących drona
+   */
+  void AddDronFileNames4Gnuplot();
+
 };
 
 

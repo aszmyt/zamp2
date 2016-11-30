@@ -1,0 +1,15 @@
+digraph "Visualization::Draw"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Visualization::Draw",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Interp4Fly::ExecCmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_interp4_fly.html#a0e0e5348c18740d2647a1c02aad4344c",tooltip="Wykonuje zadanie dla danej wtyczki i wyświetla pozycję drona. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Interp4Rotate::ExecCmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_interp4_rotate.html#ad52a5291619f8702ade2af5306b72f62",tooltip="Wykonuje zadanie dla danej wtyczki i wyświetla pozycję drona. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Interp4Scene::ExecCmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_interp4_scene.html#a29235f5c17994de0c69653269f88c2a5",tooltip="Wykonuje zadanie dla danej wtyczki i wyświetla pozycję drona. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Interp4Turn::ExecCmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_interp4_turn.html#aa6b8457105e0d372ecfb5bdfec0d7efa",tooltip="Wykonuje zadanie dla danej wtyczki i wyświetla pozycję drona. "];
+}

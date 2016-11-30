@@ -1,0 +1,17 @@
+#define ROTATE_SPEED 30
+/*
+  *  Przykladowy  zestaw polecen
+*/
+ReadScene scene.xml
+Pause 2000
+Fly 10 20 60   //  Start niezbyt szybki
+Fly 0 0 0    //  A zatrzymujemy
+Rotate ROTATE_SPEED 90
+Fly 0 0 0
+Fly 30 0 80
+Rotate 10 45
+Fly 20 40 80
+Rotate 10 -45
+Fly 15 -5 30
+Fly 0 -3 10
+

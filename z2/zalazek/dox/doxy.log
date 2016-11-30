@@ -1,0 +1,1018 @@
+warning: Tag `XML_SCHEMA' at line 1839 of file `Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag `XML_DTD' at line 1845 of file `Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: doxygen no longer ships with the FreeSans font.
+You may want to clear or change DOT_FONTNAME.
+Otherwise you run the risk that the wrong font is being used for dot generated graphs.
+warning: The selected output language "polish" has not been updated
+since release 1.8.2.  As a result some sentences may appear in English.
+
+/home/lili/pKoncowy/src/main.cpp:63: warning: The following parameters of ExecCommands(string FileName, Manager4Plugins &slownik, DronPose *pRobPose, Visualization *pVis, Scene *scn) are not documented:
+  parameter 'scn'
+/home/lili/pKoncowy/inc/Interp4Command.hh:56: warning: The following parameters of Interp4Command::ExecCmd(DronPose *pRobPose, Visualization *pVis, Scene *scn) const =0 are not documented:
+  parameter 'scn'
+/home/lili/pKoncowy/plugin/inc/Interp4Fly.hh:62: warning: The following parameters of Interp4Fly::ExecCmd(DronPose *pRobPose, Visualization *pVis, Scene *scn) const are not documented:
+  parameter 'scn'
+/home/lili/pKoncowy/plugin/inc/Interp4Pause.hh:55: warning: The following parameters of Interp4Pause::ExecCmd(DronPose *pRobPose, Visualization *pVis, Scene *scn) const are not documented:
+  parameter 'scn'
+/home/lili/pKoncowy/plugin/inc/Interp4Rotate.hh:58: warning: The following parameters of Interp4Rotate::ExecCmd(DronPose *pRobPose, Visualization *pVis, Scene *scn) const are not documented:
+  parameter 'scn'
+/home/lili/pKoncowy/plugin/inc/Interp4Scene.hh:56: warning: The following parameters of Interp4Scene::ExecCmd(DronPose *pRobPose, Visualization *pVis, Scene *scn) const are not documented:
+  parameter 'scn'
+/home/lili/pKoncowy/plugin/inc/Interp4Turn.hh:62: warning: The following parameters of Interp4Turn::ExecCmd(DronPose *pRobPose, Visualization *pVis, Scene *scn) const are not documented:
+  parameter 'scn'
+/home/lili/pKoncowy/inc/Manager4Plugins.hh:93: warning: The following parameters of Manager4Plugins::ExecuteCommand(std::string command, DronPose *pRobPose, Visualization *pVis, Scene *scn) are not documented:
+  parameter 'scn'
+/home/lili/pKoncowy/src/xmlparser4scene.cpp:128: warning: Unsupported xml/html tag </Action> found
+/home/lili/pKoncowy/inc/xmlparser4scene.hh:52: warning: The following parameters of XMLParser4Scene::endElement(const XMLCh *const pURI, const XMLCh *const pLocalName, const XMLCh *const pQName) are not documented:
+  parameter 'pURI'
+  parameter 'pQName'
+/home/lili/pKoncowy/src/xmlparser4scene.cpp:196: warning: argument 'Except' of command @param is not found in the argument list of XMLParser4Scene::error(const xercesc::SAXParseException &Exception)
+/home/lili/pKoncowy/inc/xmlparser4scene.hh:65: warning: The following parameters of XMLParser4Scene::error(const xercesc::SAXParseException &Exception) are not documented:
+  parameter 'Exception'
+/home/lili/pKoncowy/inc/xmlparser4scene.hh:42: warning: The following parameters of XMLParser4Scene::startElement(const XMLCh *const pURI, const XMLCh *const pLocalName, const XMLCh *const pQNname, const xercesc::Attributes &Attrs) are not documented:
+  parameter 'pURI'
+  parameter 'pQNname'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_colision_8cpp__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_colision_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_colision_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_colision_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_colision_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_colision_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_cuboid_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_cuboid_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_cuboid_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_cuboid_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_dron_pose_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_dron_pose_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_dron_pose_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_dron_pose_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a6c3d421ff2f75448e73d2e2d5bd4193f_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a6c3d421ff2f75448e73d2e2d5bd4193f_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a6c3d421ff2f75448e73d2e2d5bd4193f_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a6c3d421ff2f75448e73d2e2d5bd4193f_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a359580f84d2edd509de42303e4759bc2_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a359580f84d2edd509de42303e4759bc2_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a859ec2a0d8df8dcd2986cafdf41929a6_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a859ec2a0d8df8dcd2986cafdf41929a6_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a359580f84d2edd509de42303e4759bc2_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a359580f84d2edd509de42303e4759bc2_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a859ec2a0d8df8dcd2986cafdf41929a6_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a859ec2a0d8df8dcd2986cafdf41929a6_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a9f7a66ce1ada8bb52c97bc5fb9110f61_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a9f7a66ce1ada8bb52c97bc5fb9110f61_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a9f7a66ce1ada8bb52c97bc5fb9110f61_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a9f7a66ce1ada8bb52c97bc5fb9110f61_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_command_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_command_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_command_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_command_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_fly_8cpp__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_fly_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_fly_8cpp_ad4f8d6a4dc782b0f28c6d962b417afdb_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_fly_8cpp_ad4f8d6a4dc782b0f28c6d962b417afdb_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_fly_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_fly_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_fly_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_fly_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_pause_8cpp__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_pause_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_pause_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_pause_8hh__incl.png"'
+sh: 1: dot: not found
+sh: 1: error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_pause_8cpp_a0ab483787498a2b002838d9426437be6_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_pause_8cpp_a0ab483787498a2b002838d9426437be6_cgraph.png"'
+dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_pause_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_pause_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_rotate_8cpp__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_rotate_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_rotate_8cpp_a0ab483787498a2b002838d9426437be6_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_rotate_8cpp_a0ab483787498a2b002838d9426437be6_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_rotate_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_rotate_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_rotate_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_rotate_8hh__incl.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_scene_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_scene_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_scene_8cpp__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_scene_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_scene_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_scene_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_turn_8cpp__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_turn_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_turn_8cpp_a0ab483787498a2b002838d9426437be6_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_turn_8cpp_a0ab483787498a2b002838d9426437be6_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_turn_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_turn_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_turn_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_turn_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/lacze__do__gnuplota_8cpp__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/lacze__do__gnuplota_8cpp__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_interp4_scene_8cpp_a0ab483787498a2b002838d9426437be6_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_interp4_scene_8cpp_a0ab483787498a2b002838d9426437be6_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/lacze__do__gnuplota_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/lacze__do__gnuplota_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/lacze__do__gnuplota_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/lacze__do__gnuplota_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/main_8cpp__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/main_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/main_8cpp_a4043c077a1c7ff0754ed53b3e2945bb5_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/main_8cpp_a4043c077a1c7ff0754ed53b3e2945bb5_cgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/main_8cpp_ad16e5e62f3579a7048e6b981b172885e_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/main_8cpp_ad16e5e62f3579a7048e6b981b172885e_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/main_8cpp_a4043c077a1c7ff0754ed53b3e2945bb5_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/main_8cpp_a4043c077a1c7ff0754ed53b3e2945bb5_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/main_8cpp_ad16e5e62f3579a7048e6b981b172885e_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/main_8cpp_ad16e5e62f3579a7048e6b981b172885e_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/main_8cpp_aa919123716c32b531ded5d6baf1a1231_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/main_8cpp_aa919123716c32b531ded5d6baf1a1231_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_manager4_plugins_8cpp__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_manager4_plugins_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/main_8cpp_aa919123716c32b531ded5d6baf1a1231_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/main_8cpp_aa919123716c32b531ded5d6baf1a1231_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_manager4_plugins_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_manager4_plugins_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_scene_8cpp__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_scene_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_scene_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_scene_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_scene_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_scene_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_visualization_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_visualization_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_visualization_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_visualization_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8cpp__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8cpp_addd0e894a30b8fc8f3e9ef588b037767_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8cpp_addd0e894a30b8fc8f3e9ef588b037767_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8cpp_addd0e894a30b8fc8f3e9ef588b037767_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8cpp_addd0e894a30b8fc8f3e9ef588b037767_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_manager4_plugins_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_manager4_plugins_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8cpp_a382fbd2d002e9cb6d8d58cb2f3cf786e_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8cpp_a382fbd2d002e9cb6d8d58cb2f3cf786e_cgraph.png"'
+sh: 1: sh: 1: dot: not founddot: not found
+
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh__incl.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8cpp_a382fbd2d002e9cb6d8d58cb2f3cf786e_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8cpp_a382fbd2d002e9cb6d8d58cb2f3cf786e_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh_addd0e894a30b8fc8f3e9ef588b037767_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh_addd0e894a30b8fc8f3e9ef588b037767_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh_a382fbd2d002e9cb6d8d58cb2f3cf786e_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh_a382fbd2d002e9cb6d8d58cb2f3cf786e_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh_addd0e894a30b8fc8f3e9ef588b037767_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh_addd0e894a30b8fc8f3e9ef588b037767_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh_a382fbd2d002e9cb6d8d58cb2f3cf786e_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh_a382fbd2d002e9cb6d8d58cb2f3cf786e_icgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/xmlparser4scene_8cpp__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/xmlparser4scene_8cpp__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/xmlparser4scene_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/xmlparser4scene_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/xmlparser4scene_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/xmlparser4scene_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_colision_afb5c4c9d16a62767861eac6b11614126_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_colision_afb5c4c9d16a62767861eac6b11614126_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_colision_afb5c4c9d16a62767861eac6b11614126_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_colision_afb5c4c9d16a62767861eac6b11614126_icgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_wtyczka_8hh__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_wtyczka_8hh__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_cuboid__coll__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_cuboid__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_cuboid_ac461206daec7270fae10de7bd93aa8bc_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_cuboid_ac461206daec7270fae10de7bd93aa8bc_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_cuboid_a84427684d92fb939e8cfcb2c815d940e_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_cuboid_a84427684d92fb939e8cfcb2c815d940e_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_cuboid_a057fd804be6a022ec22411eb5b9a3073_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_cuboid_a057fd804be6a022ec22411eb5b9a3073_cgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/_wtyczka_8hh__dep__incl.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/_wtyczka_8hh__dep__incl.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_cuboid_a057fd804be6a022ec22411eb5b9a3073_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_cuboid_a057fd804be6a022ec22411eb5b9a3073_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_cuboid_ad4ab95061ca2e19aa7e2c890eb345e22_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_cuboid_ad4ab95061ca2e19aa7e2c890eb345e22_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_dron_pose__coll__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_dron_pose__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_cuboid_ad4ab95061ca2e19aa7e2c890eb345e22_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_cuboid_ad4ab95061ca2e19aa7e2c890eb345e22_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_dron_pose_aa9160f3023b57af02925b0f897f479d7_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_dron_pose_aa9160f3023b57af02925b0f897f479d7_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_dron_pose_aee0129456ec59fde5b6bdbadb9c699e9_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_dron_pose_aee0129456ec59fde5b6bdbadb9c699e9_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_dron_pose_a28a67bce394f521e1dad82e1e732d2b4_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_dron_pose_a28a67bce394f521e1dad82e1e732d2b4_icgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_dron_pose_aeefe822241c1c8dbcab3e806dd1016bf_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_dron_pose_aeefe822241c1c8dbcab3e806dd1016bf_icgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_dron_pose_aeefe822241c1c8dbcab3e806dd1016bf_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_dron_pose_aeefe822241c1c8dbcab3e806dd1016bf_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer__coll__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer__coll__graph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_a2838d8dfb9a8e5f1c383f59f2dd2d9a1_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_a2838d8dfb9a8e5f1c383f59f2dd2d9a1_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_a2838d8dfb9a8e5f1c383f59f2dd2d9a1_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_a2838d8dfb9a8e5f1c383f59f2dd2d9a1_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_aee1fb6169a183e91654dbb00b9332b81_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_aee1fb6169a183e91654dbb00b9332b81_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_ad50187da03a2c0687249e770eb3e1c82_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_ad50187da03a2c0687249e770eb3e1c82_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_afa4a1fed9b333b9e9a33a2fbb7ed9e79_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_afa4a1fed9b333b9e9a33a2fbb7ed9e79_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_command__inherit__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_command__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_command_a620ba28206850d0bce8dbb2364c73366_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_command_a620ba28206850d0bce8dbb2364c73366_cgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_a22f8dce18177af24b7b66ebac096d8a6_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_a22f8dce18177af24b7b66ebac096d8a6_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_command_a6e16e7906b8227fdaa3b9a341bf49c2b_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_command_a6e16e7906b8227fdaa3b9a341bf49c2b_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer__inherit__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer__inherit__graph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_command_a08fbbf2a70cdac46930b0eba6f5f361c_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_command_a08fbbf2a70cdac46930b0eba6f5f361c_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_command_a693ca79d24ba27d11a19ed6fc90c37b9_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_command_a693ca79d24ba27d11a19ed6fc90c37b9_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_command_a3e15ef01af10fa8961926fd9b0274ab8_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_command_a3e15ef01af10fa8961926fd9b0274ab8_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_fly__inherit__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_fly__inherit__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_command_a9b1bff7ff363991b35965ae9dfeac648_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_command_a9b1bff7ff363991b35965ae9dfeac648_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_fly__coll__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_fly__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a85dc3badb4b22d7d08f339b256abc507_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a85dc3badb4b22d7d08f339b256abc507_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a49978430e1b3f289d1886dbea57dfa82_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a49978430e1b3f289d1886dbea57dfa82_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a87ba6f2a2f81b12ce7469913b891137c_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a87ba6f2a2f81b12ce7469913b891137c_cgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a77f2758767fe7e8bbf15ec32a12abb43_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a77f2758767fe7e8bbf15ec32a12abb43_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a4ead072f01586ac62834d971debd2ea7_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a4ead072f01586ac62834d971debd2ea7_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_fly_af7587acc60d7904c8b16266e0781113e_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_fly_af7587acc60d7904c8b16266e0781113e_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a49978430e1b3f289d1886dbea57dfa82_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a49978430e1b3f289d1886dbea57dfa82_cgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_pause__inherit__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_pause__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_pause__coll__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_pause__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_pause_a8ed3abb0ba307e144e4c07f586f48eb9_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_pause_a8ed3abb0ba307e144e4c07f586f48eb9_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_pause_a83787a2f3cc02c0164597ff506fed3de_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_pause_a83787a2f3cc02c0164597ff506fed3de_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_pause_a83787a2f3cc02c0164597ff506fed3de_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_pause_a83787a2f3cc02c0164597ff506fed3de_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_pause_a5bd1966c9ee6569635b925e78915e0c9_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_pause_a5bd1966c9ee6569635b925e78915e0c9_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_pause_aa5deef27c158b79f31c083950a0b852c_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_pause_aa5deef27c158b79f31c083950a0b852c_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate__inherit__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_pause_aa12d0dd443e7c46c88f3f139d7382a1d_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_pause_aa12d0dd443e7c46c88f3f139d7382a1d_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_aaf3f5db3c3f9a49ea4f9e5af74f0f240_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_aaf3f5db3c3f9a49ea4f9e5af74f0f240_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate__coll__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_acd9e8ff38a42487c17c98d28d8d81532_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_acd9e8ff38a42487c17c98d28d8d81532_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_a0ab7a741148d00a0684de165255d8ea9_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_a0ab7a741148d00a0684de165255d8ea9_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_ab062c3a6836e8e4eaccf85b08ea7512e_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_ab062c3a6836e8e4eaccf85b08ea7512e_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_acb88685d98e105b1ad795302157e29e7_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_acb88685d98e105b1ad795302157e29e7_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_a7a9896e29d1137699a9d5171e6133ffb_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_a7a9896e29d1137699a9d5171e6133ffb_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_scene__inherit__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_scene__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_acd9e8ff38a42487c17c98d28d8d81532_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_acd9e8ff38a42487c17c98d28d8d81532_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_scene_ac80ea41f89a92ef79f0b53573333dc92_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_scene_ac80ea41f89a92ef79f0b53573333dc92_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_scene__coll__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_scene__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_scene_a1ff894a3a32c04727c75c0284ab6208a_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_scene_a1ff894a3a32c04727c75c0284ab6208a_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_scene_adf0ace8634d021405df3e83448d150a9_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_scene_adf0ace8634d021405df3e83448d150a9_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_scene_a1ff894a3a32c04727c75c0284ab6208a_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_scene_a1ff894a3a32c04727c75c0284ab6208a_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_scene_ab015d15e966c449b20a8f2b681ddd893_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_scene_ab015d15e966c449b20a8f2b681ddd893_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_scene_ad444f2c7137f72398f9376db0198f546_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_scene_ad444f2c7137f72398f9376db0198f546_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_scene_ab144b15d4bc8a9a4efdbeb21c5fbef4f_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_scene_ab144b15d4bc8a9a4efdbeb21c5fbef4f_cgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_turn__coll__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_turn__coll__graph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_turn__inherit__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_turn__inherit__graph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_turn_a6b702fb651beff94fa67276bc231c741_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_turn_a6b702fb651beff94fa67276bc231c741_icgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_turn_aec77aee18bffdace6167858c0996dae4_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_turn_aec77aee18bffdace6167858c0996dae4_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_turn_a5af667015f412dbe5e0082aea6c33142_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_turn_a5af667015f412dbe5e0082aea6c33142_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_turn_a6b702fb651beff94fa67276bc231c741_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_turn_a6b702fb651beff94fa67276bc231c741_cgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_turn_ae568e10b0875e4ea69db6ac75c50d672_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_turn_ae568e10b0875e4ea69db6ac75c50d672_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_af7b699de99c5bdd31b74a8c80c678307_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_af7b699de99c5bdd31b74a8c80c678307_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_af7b699de99c5bdd31b74a8c80c678307_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_af7b699de99c5bdd31b74a8c80c678307_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_a8f0662a8c202f775a405044ee3d53d00_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_a8f0662a8c202f775a405044ee3d53d00_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_ac9ce542b2c0813abf551f96a8e24dd41_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_ac9ce542b2c0813abf551f96a8e24dd41_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_a3ea6748b725a5b6a2af5efb4d744c814_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_a3ea6748b725a5b6a2af5efb4d744c814_icgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_turn_af41550e5e844fe420a39a4c432f44d33_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_turn_af41550e5e844fe420a39a4c432f44d33_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_interp4_turn_a3e0eca6a8f595482940a2bd11a0e21f1_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_interp4_turn_a3e0eca6a8f595482940a2bd11a0e21f1_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_abce87dfdeff52326d934948f5bff16b7_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_abce87dfdeff52326d934948f5bff16b7_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_a95156592484cf7c59198610aab9660e4_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_a95156592484cf7c59198610aab9660e4_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_a836e7ab4c52a56d35cf3eb98cdee5917_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_a836e7ab4c52a56d35cf3eb98cdee5917_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_scene_aa673e67c91dff47b5ab1550de35bfa19_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_scene_aa673e67c91dff47b5ab1550de35bfa19_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_scene_ad9703385ed55478f73ab5648aea5b0a2_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_scene_ad9703385ed55478f73ab5648aea5b0a2_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_scene_a0a2aaa4fdf5fd1ed5106679c52903a60_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_scene_a0a2aaa4fdf5fd1ed5106679c52903a60_cgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_visualization_ad5a2dbdd604cafb0c38b586886bbd924_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_visualization_ad5a2dbdd604cafb0c38b586886bbd924_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_visualization_ad5a2dbdd604cafb0c38b586886bbd924_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_visualization_ad5a2dbdd604cafb0c38b586886bbd924_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_visualization_a4f3c0ad178b308c9ad4ddc9e647d7a16_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_visualization_a4f3c0ad178b308c9ad4ddc9e647d7a16_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_visualization_ae3e5a56475e46db693425495ebd0e267_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_visualization_ae3e5a56475e46db693425495ebd0e267_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_a7c48a57fd36c0af29e26c825f90a973f_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_a7c48a57fd36c0af29e26c825f90a973f_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_afc9fde57d581f4e9378e371086579764_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_afc9fde57d581f4e9378e371086579764_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_a606075306dbc352a6f42766d82e67bff_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_a606075306dbc352a6f42766d82e67bff_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_a8f9b6e3955a32449195a43966607f6b8_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_a8f9b6e3955a32449195a43966607f6b8_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_ad0c31a932da0869dd3ef99ed6e8025c1_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_ad0c31a932da0869dd3ef99ed6e8025c1_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_a470e6aadf3fca3101398c9326f20bfa6_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_a470e6aadf3fca3101398c9326f20bfa6_icgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_visualization__inherit__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_visualization__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_a79389ab1455820e0ad030350668d91d7_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_a79389ab1455820e0ad030350668d91d7_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_aa6cbb7a13c8975b47f41794c99d77093_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_wektor3_d_aa6cbb7a13c8975b47f41794c99d77093_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_wtyczka__coll__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_wtyczka__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_x_m_l_parser4_scene__coll__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_x_m_l_parser4_scene__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_x_m_l_parser4_scene__inherit__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_x_m_l_parser4_scene__inherit__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_x_m_l_parser4_scene_a21d50c14e7729235589b58f32dce9556_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_x_m_l_parser4_scene_a21d50c14e7729235589b58f32dce9556_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/namespace_pz_g_ae1ae4d36f66c77879380ba73da8e20e3_icgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/namespace_pz_g_ae1ae4d36f66c77879380ba73da8e20e3_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_pz_g_1_1_info_pliku_do_rysowania__coll__graph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_pz_g_1_1_info_pliku_do_rysowania__coll__graph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/class_pz_g_1_1_lacze_do_g_n_u_plota_ad5943b34064881ec04de591fa04c3a09_cgraph.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/class_pz_g_1_1_lacze_do_g_n_u_plota_ad5943b34064881ec04de591fa04c3a09_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/dir_b58d0ee721b2087e51cb0bcc78a10465_dep.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/dir_b58d0ee721b2087e51cb0bcc78a10465_dep.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/dir_b4c3aec6cd8f28418150dce663061cfa_dep.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/dir_b4c3aec6cd8f28418150dce663061cfa_dep.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/dir_e5c39bd51a803044aa486678acd3aea1_dep.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/dir_e5c39bd51a803044aa486678acd3aea1_dep.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/dir_68267d1309a1af8e8297ef4c3efbcdba_dep.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/dir_68267d1309a1af8e8297ef4c3efbcdba_dep.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/inherit_graph_0.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/inherit_graph_0.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/inherit_graph_1.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/inherit_graph_1.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/inherit_graph_2.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/inherit_graph_2.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/inherit_graph_3.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/inherit_graph_3.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/inherit_graph_4.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/inherit_graph_4.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/graph_legend.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/graph_legend.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/inherit_graph_5.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/inherit_graph_5.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/inherit_graph_6.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/inherit_graph_6.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/inherit_graph_7.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/inherit_graph_7.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/inherit_graph_8.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/inherit_graph_8.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/inherit_graph_9.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/inherit_graph_9.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/inherit_graph_10.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/inherit_graph_10.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/lili/pKoncowy/dox/doc/html/inherit_graph_11.dot" -Tpng -o "/home/lili/pKoncowy/dox/doc/html/inherit_graph_11.png"'
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_colision_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_colision_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_colision_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_cuboid_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_cuboid_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_dron_pose_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_dron_pose_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a6c3d421ff2f75448e73d2e2d5bd4193f_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a6c3d421ff2f75448e73d2e2d5bd4193f_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a359580f84d2edd509de42303e4759bc2_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a359580f84d2edd509de42303e4759bc2_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a859ec2a0d8df8dcd2986cafdf41929a6_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a859ec2a0d8df8dcd2986cafdf41929a6_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a9f7a66ce1ada8bb52c97bc5fb9110f61_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8cpp_a9f7a66ce1ada8bb52c97bc5fb9110f61_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_gnuplot_visualizer_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_command_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_command_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_fly_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_fly_8cpp_ad4f8d6a4dc782b0f28c6d962b417afdb_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_fly_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_fly_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_pause_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_pause_8cpp_a0ab483787498a2b002838d9426437be6_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_pause_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_pause_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_rotate_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_rotate_8cpp_a0ab483787498a2b002838d9426437be6_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_rotate_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_rotate_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_scene_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_scene_8cpp_a0ab483787498a2b002838d9426437be6_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_scene_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_scene_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_turn_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_turn_8cpp_a0ab483787498a2b002838d9426437be6_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_turn_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_interp4_turn_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/lacze__do__gnuplota_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/lacze__do__gnuplota_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/lacze__do__gnuplota_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/main_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/main_8cpp_a4043c077a1c7ff0754ed53b3e2945bb5_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/main_8cpp_a4043c077a1c7ff0754ed53b3e2945bb5_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/main_8cpp_ad16e5e62f3579a7048e6b981b172885e_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/main_8cpp_ad16e5e62f3579a7048e6b981b172885e_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/main_8cpp_aa919123716c32b531ded5d6baf1a1231_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/main_8cpp_aa919123716c32b531ded5d6baf1a1231_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_manager4_plugins_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_manager4_plugins_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_manager4_plugins_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_scene_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_scene_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_scene_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_visualization_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_visualization_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_wektor3_d_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_wektor3_d_8cpp_addd0e894a30b8fc8f3e9ef588b037767_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_wektor3_d_8cpp_addd0e894a30b8fc8f3e9ef588b037767_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_wektor3_d_8cpp_a382fbd2d002e9cb6d8d58cb2f3cf786e_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_wektor3_d_8cpp_a382fbd2d002e9cb6d8d58cb2f3cf786e_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh_addd0e894a30b8fc8f3e9ef588b037767_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh_addd0e894a30b8fc8f3e9ef588b037767_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh_a382fbd2d002e9cb6d8d58cb2f3cf786e_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_wektor3_d_8hh_a382fbd2d002e9cb6d8d58cb2f3cf786e_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_wtyczka_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/_wtyczka_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/xmlparser4scene_8cpp__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/xmlparser4scene_8hh__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/xmlparser4scene_8hh__dep__incl.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_colision_afb5c4c9d16a62767861eac6b11614126_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_colision_afb5c4c9d16a62767861eac6b11614126_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_cuboid__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_cuboid_ac461206daec7270fae10de7bd93aa8bc_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_cuboid_a84427684d92fb939e8cfcb2c815d940e_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_cuboid_a057fd804be6a022ec22411eb5b9a3073_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_cuboid_a057fd804be6a022ec22411eb5b9a3073_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_cuboid_ad4ab95061ca2e19aa7e2c890eb345e22_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_cuboid_ad4ab95061ca2e19aa7e2c890eb345e22_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_dron_pose__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_dron_pose_aa9160f3023b57af02925b0f897f479d7_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_dron_pose_a28a67bce394f521e1dad82e1e732d2b4_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_dron_pose_aee0129456ec59fde5b6bdbadb9c699e9_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_dron_pose_aeefe822241c1c8dbcab3e806dd1016bf_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_dron_pose_aeefe822241c1c8dbcab3e806dd1016bf_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_a22f8dce18177af24b7b66ebac096d8a6_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_a2838d8dfb9a8e5f1c383f59f2dd2d9a1_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_a2838d8dfb9a8e5f1c383f59f2dd2d9a1_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_aee1fb6169a183e91654dbb00b9332b81_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_ad50187da03a2c0687249e770eb3e1c82_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_gnuplot_visualizer_afa4a1fed9b333b9e9a33a2fbb7ed9e79_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_command__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_command_a620ba28206850d0bce8dbb2364c73366_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_command_a6e16e7906b8227fdaa3b9a341bf49c2b_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_command_a9b1bff7ff363991b35965ae9dfeac648_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_command_a08fbbf2a70cdac46930b0eba6f5f361c_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_command_a693ca79d24ba27d11a19ed6fc90c37b9_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_command_a3e15ef01af10fa8961926fd9b0274ab8_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_fly__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_fly__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a85dc3badb4b22d7d08f339b256abc507_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a49978430e1b3f289d1886dbea57dfa82_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a49978430e1b3f289d1886dbea57dfa82_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a87ba6f2a2f81b12ce7469913b891137c_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a77f2758767fe7e8bbf15ec32a12abb43_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_fly_a4ead072f01586ac62834d971debd2ea7_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_fly_af7587acc60d7904c8b16266e0781113e_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_pause__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_pause__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_pause_a8ed3abb0ba307e144e4c07f586f48eb9_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_pause_a83787a2f3cc02c0164597ff506fed3de_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_pause_a83787a2f3cc02c0164597ff506fed3de_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_pause_aa5deef27c158b79f31c083950a0b852c_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_pause_a5bd1966c9ee6569635b925e78915e0c9_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_pause_aa12d0dd443e7c46c88f3f139d7382a1d_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_rotate__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_rotate__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_aaf3f5db3c3f9a49ea4f9e5af74f0f240_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_acd9e8ff38a42487c17c98d28d8d81532_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_acd9e8ff38a42487c17c98d28d8d81532_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_a0ab7a741148d00a0684de165255d8ea9_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_ab062c3a6836e8e4eaccf85b08ea7512e_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_acb88685d98e105b1ad795302157e29e7_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_rotate_a7a9896e29d1137699a9d5171e6133ffb_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_scene__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_scene__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_scene_ac80ea41f89a92ef79f0b53573333dc92_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_scene_a1ff894a3a32c04727c75c0284ab6208a_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_scene_a1ff894a3a32c04727c75c0284ab6208a_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_scene_adf0ace8634d021405df3e83448d150a9_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_scene_ab015d15e966c449b20a8f2b681ddd893_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_scene_ad444f2c7137f72398f9376db0198f546_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_scene_ab144b15d4bc8a9a4efdbeb21c5fbef4f_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_turn__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_turn__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_turn_aec77aee18bffdace6167858c0996dae4_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_turn_a6b702fb651beff94fa67276bc231c741_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_turn_a6b702fb651beff94fa67276bc231c741_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_turn_a5af667015f412dbe5e0082aea6c33142_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_turn_af41550e5e844fe420a39a4c432f44d33_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_turn_a3e0eca6a8f595482940a2bd11a0e21f1_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_interp4_turn_ae568e10b0875e4ea69db6ac75c50d672_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_af7b699de99c5bdd31b74a8c80c678307_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_af7b699de99c5bdd31b74a8c80c678307_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_a8f0662a8c202f775a405044ee3d53d00_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_ac9ce542b2c0813abf551f96a8e24dd41_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_a3ea6748b725a5b6a2af5efb4d744c814_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_a95156592484cf7c59198610aab9660e4_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_abce87dfdeff52326d934948f5bff16b7_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_manager4_plugins_a836e7ab4c52a56d35cf3eb98cdee5917_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_scene_aa673e67c91dff47b5ab1550de35bfa19_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_scene_ad9703385ed55478f73ab5648aea5b0a2_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_scene_a0a2aaa4fdf5fd1ed5106679c52903a60_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_visualization__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_visualization_ad5a2dbdd604cafb0c38b586886bbd924_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_visualization_ad5a2dbdd604cafb0c38b586886bbd924_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_visualization_ae3e5a56475e46db693425495ebd0e267_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_visualization_a4f3c0ad178b308c9ad4ddc9e647d7a16_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_wektor3_d_a7c48a57fd36c0af29e26c825f90a973f_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_wektor3_d_afc9fde57d581f4e9378e371086579764_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_wektor3_d_a606075306dbc352a6f42766d82e67bff_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_wektor3_d_a8f9b6e3955a32449195a43966607f6b8_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_wektor3_d_ad0c31a932da0869dd3ef99ed6e8025c1_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_wektor3_d_a470e6aadf3fca3101398c9326f20bfa6_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_wektor3_d_a79389ab1455820e0ad030350668d91d7_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_wektor3_d_aa6cbb7a13c8975b47f41794c99d77093_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_wtyczka__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_x_m_l_parser4_scene__inherit__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_x_m_l_parser4_scene__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_x_m_l_parser4_scene_a21d50c14e7729235589b58f32dce9556_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/namespace_pz_g_ae1ae4d36f66c77879380ba73da8e20e3_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_pz_g_1_1_info_pliku_do_rysowania__coll__graph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/class_pz_g_1_1_lacze_do_g_n_u_plota_ad5943b34064881ec04de591fa04c3a09_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/dir_b58d0ee721b2087e51cb0bcc78a10465_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/dir_b4c3aec6cd8f28418150dce663061cfa_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/dir_e5c39bd51a803044aa486678acd3aea1_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/dir_68267d1309a1af8e8297ef4c3efbcdba_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/inherit_graph_0.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/inherit_graph_1.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/inherit_graph_2.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/inherit_graph_3.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/inherit_graph_4.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/inherit_graph_5.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/inherit_graph_6.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/inherit_graph_7.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/inherit_graph_8.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/inherit_graph_9.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/inherit_graph_10.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/lili/pKoncowy/dox/doc/html/inherit_graph_11.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
